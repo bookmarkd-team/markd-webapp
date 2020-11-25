@@ -20,6 +20,8 @@ CREATE TABLE `boards` (
   `created_at` timestamp
 );
 
+--tag table goes here
+
 CREATE TABLE `savedToBoard` (
   `savedToBoardId` int PRIMARY KEY AUTO_INCREMENT,
   `boardId` int,
