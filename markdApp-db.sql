@@ -10,6 +10,8 @@ CREATE TABLE `user` (
   `created_at` timestamp
 );
 
+INSERT INTO `user` (`userId`, `firstName`, `lastName`, `emailAddress`, `password`, `created_at`) VALUES (NULL, 'James', 'Doe', 'james.doe@email.com', 'KingJames23', CURRENT_TIMESTAMP), (NULL, 'Amy', 'Charcuterie', 'Amy.charcuterie@email.com', 'notJustAcheeseBoard', CURRENT_TIMESTAMP);
+
 CREATE TABLE `boards` (
   `boardId` int PRIMARY KEY AUTO_INCREMENT,
   `userId` int,
