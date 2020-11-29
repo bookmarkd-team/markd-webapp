@@ -1,0 +1,93 @@
+@font-face {
+  font-family: Muli;
+  src: url(../font/Muli.ttf);
+}
+
+body{
+    font-family: Muli;
+}
+
+.cover{
+    background-image: url("../imgs/cover.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width:auto;
+}
+
+.cover-text{
+    position: absolute;
+    top: 0;
+    top: 20%;
+    left:5%;
+    font-size: 1.8em;
+    line-height: 45px;
+    color:black;
+}
+
+#head1{
+    font-weight: bold;
+    color:#ff7777;
+}
+
+.questions1{
+    display: flex;
+}
+
+.question1{
+    display: flex;
+    background-color: #ff7777;
+    width:50%;
+    height:450px;
+    justify-content: center;
+}
+
+.rec1{
+    display: flex;
+    background-color: white;
+    width:50%;
+    height:450px;
+    justify-content: center;
+}
+
+.questions2{
+    display:flex;
+}
+
+.rec2{
+    display: flex;
+    background-color: white;
+    width:50%;
+    height:350px;
+    justify-content: center;
+}
+
+.question2{
+    display: flex;
+    background-color: #ff7777;
+    width:50%;
+    height:450px;
+    justify-content: center;
+}
+
+.questions3{
+    display:flex;
+}
+
+.question3{
+    display: flex;
+    background-color: #ff7777;
+    width:50%;
+    height:450px;
+    justify-content: center;
+}
+
+.rec3{
+    display: flex;
+    background-color: white;
+    width:50%;
+    height:450px;
+    justify-content: center;
+}
