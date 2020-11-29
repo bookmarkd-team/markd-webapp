@@ -1,0 +1,51 @@
+.banner{
+    display:flex;
+    background-color: white;
+    flex-direction: column;
+    height:30vh;
+}
+
+.title{
+    font-size: 2.0em;
+    padding-left: 25px;
+    color:#ff7777;
+}
+
+.board{
+    position: relative;
+    justify-content: flex-start;
+    align-self: flex-end;
+    background-color: #1B1948;
+    width:850px;
+    bottom:200px;
+}
+
+.create{
+    position: relative;
+    justify-content: flex-start;
+    align-self: flex-end;
+    background-color: #1B1948;
+    width:850px;
+    bottom:150px;
+}
+
+
+.image{
+    display:flex;
+    background-image: url("../imgs/cover2.jpg");
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#text1{
+    padding-left: 25px;
+    color:#FFF9DF;
+}
+
+#text2{
+    padding-left: 25px;
+    color:#FFF9DF
+}
