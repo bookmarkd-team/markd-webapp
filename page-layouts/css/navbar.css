@@ -4,8 +4,7 @@
 }
 
 .topnav{
-    border-style:solid;
-    width: auto;
+    width: 100%;
     font-family: Muli;
     justify-content: center;
 }
