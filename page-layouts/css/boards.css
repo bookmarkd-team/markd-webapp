@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Muli";
+    src: url("/muli/Muli.ttf") format("ttf");
+    src: url("/muli/Muli-Bold.ttf") format("ttf");
+}
+
+body{
+
+    font: 25px Muli, sans-serif;  
+    color: #FFF9DF; 
+ 
+} 
+
+
+
+#bio{
+  
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
+    padding-top:50px; 
+    background-color:#1B1948; 
+
+
+}
+
+#buttonArea{
+    background-color:#1B1948; 
+    width:auto;
+    height:80px; 
+    padding-right:20px; 
+}
+textarea{
+    resize:none; 
+     
+}
+
+.button{
+    
+    float:right;   
+    width: 170px;
+    height:50px;
+    border-radius:7px;
+    border-color:#FF7777;
+    border-style: solid;
+    background-color:#FF7777; 
+    font: 25px Muli, sans-serif;
+    color:#FFF9DF;
+    padding:0;
+}
+.button{
+    opacity: 0.85;
+    transition: 0.3s;
+    cursor: pointer;   
+
+}
+.button:hover {opacity: 1}
+
+.addButton{
+    position: fixed;
+    float:right;
+bottom:0; 
+
+    width: 200px;
+    height:50px;
+    border-radius:7px;
+    color:#FFF9DF; 
+    background-color:#1B1948; 
+    font: 25px Muli, sans-serif;    
+    padding:0;
+}

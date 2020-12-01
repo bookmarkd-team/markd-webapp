@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Muli";
-    src: url("/muli/Muli.ttf") format("ttf");
+    src: url("/Muli.ttf") format("ttf");
     src: url("/muli/Muli-Bold.ttf") format("ttf");
 }
 
@@ -76,9 +76,10 @@ input[type=password], select {
   }
 .button{
     width: 170px;
-    height:40px;
+    height:50px;
     border-radius:7px;
     border-color:#FF7777;
+    border-style: solid;
     background-color:#FF7777; 
     font: 25px Muli, sans-serif;
     color:#FFF9DF;

@@ -5,7 +5,7 @@
 }
 
 body{
-   
+
     font: 25px Muli, sans-serif;  
     color: #FFF9DF; 
     background-color:grey; 
@@ -76,12 +76,14 @@ input[type=password], select {
   }
 .button{
     width: 170px;
-    height:40px;
+    height:50px;
     border-radius:7px;
     border-color:#FF7777;
+    border-style: solid;
     background-color:#FF7777; 
     font: 25px Muli, sans-serif;
     color:#FFF9DF;
+    
 }
 .button{
     opacity: 0.85;
