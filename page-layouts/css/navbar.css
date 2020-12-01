@@ -1,15 +1,16 @@
 @font-face {
   font-family: Muli;
-  src: url(Muli.ttf);
+  src: url(..font/Muli.ttf);
 }
 
 .topnav{
-    width: 100%;
     font-family: Muli;
     justify-content: center;
+    width:100%;
 }
 
 ul {
+    font-family: Muli;
     list-style-type: none;
     margin: 0;
     padding: 0;
