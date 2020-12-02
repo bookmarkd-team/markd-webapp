@@ -18,15 +18,16 @@ $stmt->execute();
 
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if($_SESSION["userId"] = $row["userId"]){
-	//session declarations
+if($row){
+    //session declarations
+    $_SESSION["userId"] = $row["userId"];
 	//successful login
-	?><p>Welcome Back, <?echo(["firstName"])?>!</p>
+	?><p>Welcome Back!</p>
 	<a href="homepage.php">Go to Home</a><?php
 
 }else{
 	//incorrect input
-	?><p>Incorrect username/password. Please Try Again</p>
+	?><p>Incorrect username/password. Please Try Again.</p>
 	<a href = "login.php">Back to Login</a><?php
 }
 ?>
