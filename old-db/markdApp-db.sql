@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `markdApp` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `markdApp`;
+CREATE DATABASE IF NOT EXISTS `markdApp-old` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `markdApp-old`;
 
 CREATE TABLE `user` (
   `userId` int PRIMARY KEY AUTO_INCREMENT,
@@ -10,8 +10,6 @@ CREATE TABLE `user` (
   `created_at` timestamp
 );
 
-INSERT INTO `user` (`userId`, `firstName`, `lastName`, `emailAddress`, `password`, `created_at`) VALUES (NULL, 'James', 'Doe', 'james.doe@email.com', 'KingJames23', CURRENT_TIMESTAMP), (NULL, 'Amy', 'Charcuterie', 'Amy.charcuterie@email.com', 'notJustAcheeseBoard', CURRENT_TIMESTAMP);
-
 CREATE TABLE `boards` (
   `boardId` int PRIMARY KEY AUTO_INCREMENT,
   `userId` int,
@@ -19,8 +17,6 @@ CREATE TABLE `boards` (
   `boardDescription` varchar(255),
   `created_at` timestamp
 );
-
---tag table goes here
 
 CREATE TABLE `savedToBoard` (
   `savedToBoardId` int PRIMARY KEY AUTO_INCREMENT,

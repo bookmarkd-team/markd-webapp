@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS `markdApp` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `markdApp`;
+
 -- phpMyAdmin SQL Dump
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
@@ -353,6 +356,23 @@ ALTER TABLE `user`
   MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
+ALTER TABLE `boards` ADD FOREIGN KEY (`userId`) REFERENCES `user` (`userId`);
+
+ALTER TABLE `savedtoboard` ADD FOREIGN KEY (`boardId`) REFERENCES `boards` (`boardId`);
+
+ALTER TABLE `savedtoboard` ADD FOREIGN KEY (`destinationId`) REFERENCES `destination` (`destinationId`);
+
+ALTER TABLE `save` ADD FOREIGN KEY (`userId`) REFERENCES `user` (`userId`);
+
+ALTER TABLE `save` ADD FOREIGN KEY (`destinationId`) REFERENCES `destination` (`destinationId`);
+
+ALTER TABLE `quizquestion` ADD FOREIGN KEY (`quizId`) REFERENCES `quiz` (`quizId`);
+
+ALTER TABLE `questionansweruser` ADD FOREIGN KEY (`questionId`) REFERENCES `quizquestion` (`questionId`);
+
+ALTER TABLE `questionansweruser` ADD FOREIGN KEY (`userId`) REFERENCES `user` (`userId`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
