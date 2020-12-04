@@ -1,0 +1,94 @@
+@font-face {
+  font-family: Muli;
+  src: url(../font/Muli.ttf);
+}
+
+body{
+    background-color: #1B1948;
+    font-family: Muli;
+}
+
+.page{
+    display: flex;
+}
+
+.message{
+    display:flex;
+    height:100vh;
+    width:50vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#msg{
+    font-size: 4.5em;
+    color: #FFF9DF;
+}
+
+.menu{
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    width:50vw;
+}
+
+.feed{
+    display:flex;
+    height:25vh;
+    width:50vw;
+    background-color: #ff7777;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#feedmsg{
+    font-size: 3.0em;
+    padding-left: 25px;
+}
+
+.mark{
+    display:flex;
+    height:25vh;
+    width:50vw;
+    background-color: #ff7777;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#markmsg{
+    font-size: 3.0em;
+    padding-left: 25px;
+}
+
+.profile{
+    display:flex;
+    height:25vh;
+    width:50vw;
+    background-color: #ff7777;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#profilemsg{
+    font-size: 3.0em;
+    padding-left: 25px;
+}
+
+.boards{
+    display:flex;
+    height:25vh;
+    width:50vw;
+    background-color: #ff7777;
+    justify-content: flex-start;
+    align-items: center;
+        margin-top: 15px;
+    margin-bottom: 15px
+}
+
+#boardsmsg{
+    font-size: 3.0em;
+    padding-left: 25px;
+}
