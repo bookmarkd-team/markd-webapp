@@ -6,14 +6,13 @@ $firstName = $_POST["firstName"];
 $lastName = $_POST["lastName"];
 $emailAddress = $_POST["emailAddress"];
 $password = $_POST["password"];
-$created_at = $_POST["created_at"];
 
 //this part adds a new user to the 'user' table
 include('includes/dbconfig.php');
 
 $stmt = $pdo->prepare("INSERT INTO `user` 
 	(`userId`, `firstName`, `lastName`, `emailAddress`, `password`, `created_at`) 
-	VALUES (NULL, '$firstName', '$lastName', '$emailAddress', '$password', '$created_at');");
+	VALUES (NULL, '$firstName', '$lastName', '$emailAddress', '$password', NULL);");
 
 $stmt->execute();
 ?>
