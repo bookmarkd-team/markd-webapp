@@ -112,14 +112,3 @@ input[type=password], select {
 input:focus {
     outline:none; 
 }
-
-a{
-  text-decoration:none; 
-  font-size:25px; 
-  font-family:Muli; 
-  color:#FF7777;  }
-  
-a:hover{
-  color:#FFF9DF;
-
-}
