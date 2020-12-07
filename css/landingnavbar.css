@@ -1,0 +1,39 @@
+@font-face {
+  font-family: Muli;
+  src: url(../font/Muli.ttf);
+}
+
+nav{
+    padding-top: 20px;
+    width:100%;
+}
+
+ul{
+    font-family: Muli;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 16px;
+    margin-right: 16px;
+    text-decoration: none;
+    background-color: #ff7777;
+    font-size: 1.5em;
+}
+
+#logo{
+    float:left;
+    width: 150px;
+    padding-top:5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
