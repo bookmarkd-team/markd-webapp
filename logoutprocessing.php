@@ -11,8 +11,12 @@ include("includes/standardheader.html");
     <meta name="keywords" content="logout mark'd">
     <meta name="author" content="mark'd">
     <title>LOGOUT</title>
+    <link rel="stylesheet" href="css/sign-in.css"> 
+
 </head>
 <body>
+<section class="firstform">
     <p>Logout Successful!</p>
+</section>
 </body>
 </html>
