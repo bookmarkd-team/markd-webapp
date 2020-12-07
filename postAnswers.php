@@ -3,15 +3,14 @@
 session_start();
 
 //receive inputs
-$userId = 1; //$_SESSION["userId"];
-$questionId= 2; //questionId= $_POST[];
-$answer= "chill"; //answer= $_POST["answer"];
+$userId = $_SESSION["userId"];
+$answer= $_POST["answer"];
 
 //connect to db
 include('includes/dbconfig.php');
 
-$stmt = $pdo->prepare("INSERT INTO `questionansweruser` 
-(`answerId`, `questionId`, `userId`,  `answer`, `created_at`) 
+$stmt = $pdo->prepare("INSERT INTO `questionansweruser`
+(`answerId`, `questionId`, `userId`,  `answer`, `created_at`)
 VALUES (NULL, '$questionId', '$userId', '$answer', NULL);");
 
 $stmt->execute();

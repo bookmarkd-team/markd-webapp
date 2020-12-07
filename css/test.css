@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Muli;
+  src: url(../font/Muli.ttf);
+}
+
+body{
+    font-family: Muli;
+}
+
+form{
+    background-color: grey;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+#button{
+    width: 10vw;
+}
+
+.answer{
+    padding: 18px;
+}
