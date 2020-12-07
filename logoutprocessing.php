@@ -1,6 +1,9 @@
-<?php session_start();
+<?php 
+
 include("includes/standardheader.html");  
- session_destroy();
+
+session_start();
+session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
