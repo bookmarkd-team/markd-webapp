@@ -1,5 +1,5 @@
 <?php session_start();
-include("includes/standardheader.html");  
+include("navbar.php");  
  session_destroy();
 ?>
 <!DOCTYPE html>
@@ -17,6 +17,7 @@ include("includes/standardheader.html");
 <body>
 <section class="firstform">
     <p>Logout Successful!</p>
+    <a href="landing.php">Go back to Home </a>
 </section>
 </body>
 </html>
