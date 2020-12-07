@@ -6,44 +6,44 @@
 
 body{
 
-    font: 25px Muli, sans-serif;  
-    color: #FFF9DF; 
- 
-} 
+    font: 25px Muli, sans-serif;
+    color: #FFF9DF;
+
+}
 
 
 
 #bio{
-  
-    display:flex; 
-    flex-direction:column; 
-    align-items:center; 
-    padding-top:50px; 
-    background-color:#1B1948; 
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:50px;
+    background-color:#1B1948;
 
 
 }
 
 #buttonArea{
-    background-color:#1B1948; 
+    background-color:#1B1948;
     width:auto;
-    height:80px; 
-    padding-right:20px; 
+    height:80px;
+    padding-right:20px;
 }
 textarea{
-    resize:none; 
-     
+    resize:none;
+
 }
 
 .button{
-    
-    float:right;   
+
+    float:right;
     width: 170px;
     height:50px;
     border-radius:7px;
     border-color:#FF7777;
     border-style: solid;
-    background-color:#FF7777; 
+    background-color:#FF7777;
     font: 25px Muli, sans-serif;
     color:#FFF9DF;
     padding:0;
@@ -51,7 +51,7 @@ textarea{
 .button{
     opacity: 0.85;
     transition: 0.3s;
-    cursor: pointer;   
+    cursor: pointer;
 
 }
 .button:hover {opacity: 1}
@@ -59,13 +59,13 @@ textarea{
 .addButton{
     position: fixed;
     float:right;
-bottom:0; 
+bottom:0;
 
     width: 200px;
     height:50px;
     border-radius:7px;
-    color:#FFF9DF; 
-    background-color:#1B1948; 
-    font: 25px Muli, sans-serif;    
+    color:#FFF9DF;
+    background-color:#1B1948;
+    font: 25px Muli, sans-serif;
     padding:0;
 }

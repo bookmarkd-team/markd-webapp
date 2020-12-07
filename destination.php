@@ -32,7 +32,7 @@
         <h1>Tokyo, Japan</h1>
             <h2>Shopping District</h2>
     </div>
-    
+
 <div class="board">
     <h1 id="text1">Add to Existing Boards</h1>
 </div>

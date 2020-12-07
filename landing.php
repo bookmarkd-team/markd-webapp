@@ -7,51 +7,46 @@
     <meta name="keywords" content="travel, marking, planning, experiences, discovery">
     <link rel="author" content="Mark'd Team" href="https://sheridancollege.ca" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/landing.css">
     <link rel='icon' type="image/png" sizes="32x32" href='icon/favicon.png'>
-    <link rel="stylesheet" href="css/landingnavbar.css">
-    <link rel="stylesheet" href="css/landing-main.css">
-
 </head>
+</html>
 
-<div class="cover">
-<div class="nav">
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class = "homenav">
 <nav>
   <ul>
-      <img src="imgs/markd.png" id="logo"/>
-      <li><a href="#">Register</a></li>
-      <li><a href="#">Login</a></li>
+      <img src="imgs/markd.png" id="logo" width=150px />
+      <li><a href="register.php">Register</a></li>
+      <li><a href="sign-in.php">Login</a></li>
   </ul>
 </nav>
 </div>
 
-<div class = "heading">
-    <h1>Discover Your Endlesss Experience</h1>
-    <button type="button" id="button">Start Discovering</button>
-</div>
-</div>
-
-<body>
-<h1 id="faq"> What is Mark'd?</h1>
-<div class ="text">
-    <p id="para"> filler text here filler text here filler text here</p>
+<div class = "homecover">
+    <h1 id="hometitle">Discover Your Endless Experience </h1>
+    <li id="discover"><a href="register.php">Start Discovering</a></li>
 </div>
 
-<h1 id="discover"> Discover More </h1>
-<div class= "imgs">
-
-<div class ="img1">
-    <h1 id="title1"> Green Alps </h1>
+<div class = "about">
+    <h1 id="head">What is Mark'd?</h1>
+    <p id="text">A travel experience planner, made simple and fun for all users. Start
+        with a travel quiz to discover your travel personality and explore
+        the endless destinations and experiences your travel personality brings you</p>
 </div>
 
-<div class ="img2">
-    <h1 id="title2"> Osaka </h1>
-</div>
-
-<div class ="img3">
-    <h1 id="title3"> Swiss Alps </h1>
-</div>
+<div class = "quiz">
+    <h1 id="head">The Travel Quiz</h1>
+    <p id="text"> Easy as 1, 2, 3! Complete a short quiz and recieve your Travel Personality.
+        We take your quiz answers and generate a travel feed filled with destinations and
+        experiences personalized by you!.</p>
+        <li id="discover"><a href="register.php">Start Quiz Now</a></li>
 </div>
 
 
-</body>
+
 </html>
+</body>
