@@ -20,7 +20,6 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-style: solid;
     display: flex;
     flex-direction: column;
     align-items: center;
