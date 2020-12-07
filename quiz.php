@@ -74,6 +74,33 @@ include('quizLoad.php');
 <input type="submit">
 </form>
 
+
+<!-- You can delete these old html -->
+<div class="rec1">
+    <h1>Recommendations </h1>
+</div>
+</div>
+
+<div class = questions2>
+<div class="rec2">
+    <h1>Recommendations</h1>
+</div>
+
+<div class="question2">
+    <h1>Question 2</h1>
+</div>
+</div>
+
+<div class="questions3">
+<div class="question3">
+    <h1>Question 3</h1>
+</div>
+
+<div class="rec3">
+    <h1>Recommendations</h1>
+</div>
+</div>
+
 <!-- Java Script -->
 <script>
 var form = document.querySelectorAll("#quiz")[0];
