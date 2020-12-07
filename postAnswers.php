@@ -4,8 +4,8 @@ session_start();
 
 //receive inputs
 $userId = 1; //$_SESSION["userId"];
-$questionId= 2; //questionId= $_POST[];
-$answer= "chill"; //answer= $_POST["answer"];
+$questionId= $_POST["questionId"];
+$answer= $_POST["answer"];
 
 //connect to db
 include('includes/dbconfig.php');
