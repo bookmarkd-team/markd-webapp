@@ -6,8 +6,6 @@ session_start();
 //Quiz Page. Loads The Quiz In a page
 include('quizLoad.php');
 
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,28 +47,35 @@ include('quizLoad.php');
 <form id="quiz">
 
 <?php
+
+//PHP Array to load questions HTML based on how many questions there are from the database pull.
     while ($row = $stmtQuizLoad->fetch(PDO::FETCH_ASSOC)) {
         ?>
-        <!-- <div class = questions1>
-            <div class="question1"> -->
-            <h1><?php echo ($row["questionString"]); ?> </h1>
-            <select id=<?php echo ("question". $row["questionId"]); ?> name=<?php echo ($row["questionId"]); ?>>
-                <option value=<?php echo ($row["resultOption1"]); ?>><?php echo ($row["resultOption1"]); ?></option>
-                <option value=<?php echo ($row["resultOption2"]); ?>><?php echo ($row["resultOption2"]); ?></option>
-            </select>
-        
+        <div class = "questionRow">
+            <!-- use this big div as ever question "row" and style accordingly -->
+            <div class = "question">
+                <h1><?php echo ($row["questionString"]); ?> </h1>
+                <select id=<?php echo ("question". $row["questionId"]); ?> name=<?php echo ($row["questionId"]); ?>>
+                    <option value=<?php echo ($row["resultOption1"]); ?>><?php echo ($row["resultOption1"]); ?></option>
+                    <option value=<?php echo ($row["resultOption2"]); ?>><?php echo ($row["resultOption2"]); ?></option>
+                </select>
+            </div>
 
-            <!-- </div> -->
-
+            <div class="recomenations">
+                <!-- use this box to put what ever on the right side of the page -->
+                <h1>Recommendations</h1>
+            </div>
+        </div>
 <?php
     }
     
 ?>
-
+<!-- closing form tags -->
 <input type="submit">
 </form>
 
 
+<!-- You can delete these old html -->
 <div class="rec1">
     <h1>Recommendations </h1>
 </div>
@@ -96,8 +101,8 @@ include('quizLoad.php');
 </div>
 </div>
 
+<!-- Java Script -->
 <script>
-
 var form = document.querySelectorAll("#quiz")[0];
 
 form.addEventListener("submit", storeAnswersInDB);
