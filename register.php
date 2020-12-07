@@ -5,28 +5,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/sign-in.css">
 
 </head>
 <body>
+<section class="firstform"> 
 
-    <div>
-        <label id="title">
-            Sign Up</br>
-        </label>
-    </div>
-
-    <section class="firstform">
+   
 
     <form action="registrationprocessing.php" method="POST" form id= "sign-in-form">
+    <div>
+    <p id="title">Sign Up</br></p>
+    </div>
+    
+    <div>
+    <input type="text" name="firstName" id="firstName" placeholder="First name" required/>
 
-    <input type="text" name="firstName" id="firstName" placeholder="first name" required/>
+    <input type="text" name="lastName" id="lastName" placeholder="Last name " required/>
 
-    <input type="text" name="lastName" id="lastName" placeholder="last name " required/>
+    <input type="email" name="emailAddress" id="emailAddress" placeholder="Email Address" required/>
 
-    <input type="email" name="emailAddress" id="emailAddress" placeholder="emailAddress" required/>
+    <input type="password" name="password" placeholder="New password" required/> </br>
+    </div>
 
-    <input type="password" name="password" placeholder="New Password" required/> </br>
 
     <div>
     <div id=formbutton>

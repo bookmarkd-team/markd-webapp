@@ -18,8 +18,7 @@ div{
     
     
 }
-#title{
-    padding-bottom:30px; 
+#title{ 
     font: bold 40px Muli, sans-serif; 
 }
 .firstform{
@@ -46,7 +45,8 @@ input[type=text], select {
     height:30px;
     border: none;
     border-bottom:2px solid#FFF9DF;
-    background-color: #1B1948
+    background-color: #1B1948;
+    margin-bottom:20px;
   }
 
 input[type=password], select {
@@ -60,6 +60,21 @@ input[type=password], select {
     background-color: #FFF9DF;
     
   }
+  input[type=email]:focus {
+    background-color: #FFF9DF;
+    
+  }
+  input[type=email], select {
+    font-size:25px;
+    width: 350px;
+    height:30px;
+    border: none;
+    border-bottom:2px solid#FFF9DF;
+    background-color: #1B1948;
+    margin-bottom:20px;
+  }
+
+
   input[type=password]:focus {
     background-color: #FFF9DF;
     
