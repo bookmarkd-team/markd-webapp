@@ -1,5 +1,5 @@
 <?php session_start();
-include("navbar.php");  
+include("includes/standardheader.html");  
  session_destroy();
 ?>
 <!DOCTYPE html>
