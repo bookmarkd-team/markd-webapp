@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="css/sign-in.css">
 </head>
 <body>
-    <div>
-    <label id="title">
-    Log In</br>
-    </label>
-    </div>
+    
 
     <section class="firstform">
     <form action="loginprocessing.php" method="POST" id="sign-in-form">
+    
+    <div>
+    <p id="title">
+    Log In</br>
+    </p>
+    </div>
 
     <div>
     <input type="text" name="emailAddress" placeholder="Enter Your Email Address" required/> </br>
