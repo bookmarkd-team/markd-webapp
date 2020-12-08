@@ -1,12 +1,3 @@
-<?php
-
-//start session
-session_start();
-
-//Quiz Page. Loads The Quiz In a page
-include('quizLoad.php');
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,11 +7,23 @@ include('quizLoad.php');
     <meta name="keywords" content="travel, marking, planning, experiences, discovery">
     <link rel="author" content="Mark'd Team" href="https://sheridancollege.ca" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='icon' type="image/png" sizes="32x32" href='icon/favicon.png'>
-    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/quiz.css">
+    <link rel='icon' type="image/png" sizes="32x32" href='icon/favicon.png'>
 </head>
+<html>
 
+<?php
+
+//start session
+session_start();
+
+//Quiz Page. Loads The Quiz In a page
+include('quizLoad.php');
+
+?>
+
+<!DOCTYPE html>
+<html>
 <?php
     include "navheader.html";
 ?>
@@ -28,14 +31,12 @@ include('quizLoad.php');
 <body>
 
 <div class="cover">
-<div class="cover-text">
-<h1 id=head1>Quiz 1</h1>
-<h2>Find Your Travel Personality</h2>
-</div>
+<h1 id="head">Quiz 1</h1>
+<p id="text">Find Your Travel Personality</p>
 </div>
 
 
-<form id="quiz">
+<form class="quiz">
 
 <?php
 
@@ -52,7 +53,7 @@ include('quizLoad.php');
                 </select>
             </div>
 
-            <div class="recomenations">
+            <div class="recommendations">
                 <!-- use this box to put what ever on the right side of the page -->
                 <h1>Recommendations</h1>
             </div>
@@ -62,35 +63,8 @@ include('quizLoad.php');
 
 ?>
 <!-- closing form tags -->
-<input type="submit">
+<input type="submit" id="submit">
 </form>
-
-
-<!-- You can delete these old html -->
-<div class="rec1">
-    <h1>Recommendations </h1>
-</div>
-</div>
-
-<div class = questions2>
-<div class="rec2">
-    <h1>Recommendations</h1>
-</div>
-
-<div class="question2">
-    <h1>Question 2</h1>
-</div>
-</div>
-
-<div class="questions3">
-<div class="question3">
-    <h1>Question 3</h1>
-</div>
-
-<div class="rec3">
-    <h1>Recommendations</h1>
-</div>
-</div>
 
 <!-- Java Script -->
 <script>
@@ -150,7 +124,6 @@ function storeAnswersInDB(event) {
     }
 
 }
-
 
 </script>
 </body>

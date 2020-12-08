@@ -7,7 +7,7 @@
     <meta name="keywords" content="travel, marking, planning, experiences, discovery">
     <link rel="author" content="Mark'd Team" href="https://sheridancollege.ca" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/landing-page.css">
     <link rel='icon' type="image/png" sizes="32x32" href='icon/favicon.png'>
 </head>
 </html>
@@ -19,7 +19,7 @@
 <div class = "homenav">
 <nav>
   <ul>
-      <img src="imgs/markd.png" id="logo" width=150px />
+      <img src="imgs/markd.png" id="logo"/>
       <li><a href="register-page.php">Register</a></li>
       <li><a href="sign-in.php">Login</a></li>
   </ul>
