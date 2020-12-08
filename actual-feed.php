@@ -50,7 +50,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     ?><p id="name"><?php echo($row["destinationName"]);?></p> </br><?php     
     ?><p><?php echo($row["city"]); ?></p> </br><?php 
     ?><p><?php echo($row["country"]);?></p> </br><?php
-    ?><p><img src=imgs/<?php echo($row["imageLink"]);?> class="back"> </p> </br><?php
+  ?><p><img src=imgs/<?php echo($row["imageLink"]);?> class="back"> </p> </br><?php
     echo("</div>"); 
 }
 ?>
