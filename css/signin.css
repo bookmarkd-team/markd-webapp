@@ -4,45 +4,40 @@
     src: url("/muli/Muli-Bold.ttf") format("ttf");
 }
 
-body, html{
-    margin: 0px;
-    padding: 0px;
-}
-
 body{
     /* background-color:black;  */
-    font: 25px Muli, sans-serif;
-    color: #FFF9DF;
-    background-color:grey;
-}
+    font: 25px Muli, sans-serif;  
+    color: #FFF9DF; 
+    background-color:grey; 
+} 
 
 div{
     display:flex;
     flex-direction:column;
     justify-content: space-around;
-
-
+    
+    
 }
-#title{
-    font: bold 40px Muli, sans-serif;
+#title{ 
+    font: bold 40px Muli, sans-serif; 
 }
 .firstform{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display:flex;
+    display:flex; 
     flex-direction:column;
-    justify-content:center;
+    justify-content:center; 
     align-items:center;
     background-color: #1B1948;
     height:600px;
-    width:500px;
-    border-radius:7px;
+    width:500px; 
+    border-radius:7px; 
 }
 .formbutton{
     font: bold 25px Muli, sans-serif;
-
+     
 }
 
 input[type=text], select {
@@ -63,11 +58,11 @@ input[type=password], select {
   }
   input[type=text]:focus {
     background-color: #FFF9DF;
-
+    
   }
   input[type=email]:focus {
     background-color: #FFF9DF;
-
+    
   }
   input[type=email], select {
     font-size:25px;
@@ -82,17 +77,17 @@ input[type=password], select {
 
   input[type=password]:focus {
     background-color: #FFF9DF;
-
+    
   }
-  input::-webkit-input-placeholder  {
-
-    font: 25px Muli, sans-serif;
-    color: #FFF9DF;
+  input::-webkit-input-placeholder  { 
+    
+    font: 25px Muli, sans-serif;  
+    color: #FFF9DF; 
     opacity: 1;
   }
 .link{
     color:#FFF9DF;
-    font: 16px Muli, sans-serif;
+    font: 16px Muli, sans-serif; 
   }
 .button{
     width: 170px;
@@ -100,14 +95,14 @@ input[type=password], select {
     border-radius:7px;
     border-color:#FF7777;
     border-style: solid;
-    background-color:#FF7777;
+    background-color:#FF7777; 
     font: 25px Muli, sans-serif;
     color:#FFF9DF;
 }
 .button{
     opacity: 0.85;
     transition: 0.3s;
-    cursor: pointer;
+    cursor: pointer;   
 
 }
 .button:hover {opacity: 1}
@@ -115,15 +110,15 @@ input[type=password], select {
 
 
 input:focus {
-    outline:none;
+    outline:none; 
 }
 
 a{
-  text-decoration:none;
-  font-size:25px;
-  font-family:Muli;
+  text-decoration:none; 
+  font-size:25px; 
+  font-family:Muli; 
   color:#FF7777;  }
-
+  
 a:hover{
   color:#FFF9DF;
 
