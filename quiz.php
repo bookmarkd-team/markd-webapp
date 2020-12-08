@@ -68,7 +68,7 @@ include('quizLoad.php');
         </div>
 <?php
     }
-    
+
 ?>
 <!-- closing form tags -->
 <input type="submit">
@@ -125,13 +125,13 @@ function storeAnswersInDB(event) {
 
         postAnswersText.push(addAnswerArray);
         }
-    }     
+    }
     //convert array items to JSON for easy parsing later
     for (i=0; i < postAnswersText.length; i++) {
     postAnswersText[i] = JSON.parse(postAnswersText[i]);
     }
 
-    //log the array with jsons after conversion 
+    //log the array with jsons after conversion
     console.log(postAnswersText);
 
 
@@ -139,25 +139,25 @@ function storeAnswersInDB(event) {
     for (i=0; i < postAnswersText.length; i++) {
 
         //Open up a asynchronous AJAX Connection
-        var xhr = new XMLHttpRequest(); 
-        xhr.onreadystatechange = function(e){     
-            console.log(xhr.readyState);     
-            if(xhr.readyState === 4){        
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(e){
+            console.log(xhr.readyState);
+            if(xhr.readyState === 4){
                 console.log(xhr.responseText);// modify or populate html elements based on response.
                     //DOM Manipulation
-            } 
+            }
         }
 
         //Make call to to php script to do the insert
-        xhr.open("POST","postAnswers.php",true); 
+        xhr.open("POST","postAnswers.php",true);
         xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        var postString = "questionId=" + postAnswersText[i].questionId + "&answer=" + postAnswersText[i].answer ; 
+        var postString = "questionId=" + postAnswersText[i].questionId + "&answer=" + postAnswersText[i].answer ;
         console.log(postString);
 
         xhr.send(postString);
 
     }
-    
+
 }
 
 
