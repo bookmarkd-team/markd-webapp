@@ -4,7 +4,7 @@
     src: url("/muli/Muli-Bold.ttf") format("ttf");
 }
 
-html, body{
+body, html{
     margin: 0px;
     padding: 0px;
 }
