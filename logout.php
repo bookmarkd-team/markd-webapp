@@ -1,5 +1,5 @@
 <?php session_start();
-include("includes/standardheader.html");  
+include("includes/standardheader.html");
  session_destroy();
 ?>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ include("includes/standardheader.html");
     <meta name="keywords" content="logout mark'd">
     <meta name="author" content="mark'd">
     <title>LOGOUT</title>
-    <link rel="stylesheet" href="css/sign-in.css"> 
+    <link rel="stylesheet" href="css/signin.css">
 
 </head>
 <body>

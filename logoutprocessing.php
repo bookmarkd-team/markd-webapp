@@ -1,5 +1,7 @@
 <?php
 
+include("includes/standardheader.html");
+
 session_start();
 session_destroy();
 ?>
