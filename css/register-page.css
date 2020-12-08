@@ -5,10 +5,14 @@
 }
 
 body{
-
     font: 25px Muli, sans-serif;
     color: #FFF9DF;
     background-color:grey;
+}
+
+html, body{
+    margin: 0px;
+    padding: 0px;
 }
 
 div{

@@ -37,14 +37,14 @@
     <h1 id="head">What is Mark'd?</h1>
     <p id="text">A travel experience planner, made simple and fun for all users. Start
         with a travel quiz to discover your travel personality and explore
-        the endless destinations and experiences your travel personality brings you</p>
+        the endless destinations and experiences your travel personality brings you.</p>
 </div>
 
 <div class = "quiz">
     <h1 id="head">The Travel Quiz</h1>
     <p id="text"> Easy as 1, 2, 3! Complete a short quiz and recieve your Travel Personality.
         We take your quiz answers and generate a travel feed filled with destinations and
-        experiences personalized by you!.</p>
+        experiences personalized by you!</p>
         <li id="discover"><a href="register-page.php">Start Quiz Now</a></li>
 </div>
 

@@ -31,6 +31,7 @@ body{
 }
 
 #discover{
+    margin-top: 10px;
     list-style: none;
     background-color: #ff7777;
     transition: all 300ms;
@@ -61,7 +62,7 @@ body{
 }
 
 .quiz{
-    height: 40vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
