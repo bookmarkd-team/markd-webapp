@@ -3,8 +3,33 @@
 //start session
 session_start();
 
-//Quiz Page. Loads The Quiz In a page
-include('getUserResultsTags.php');
+//receive inputs
+$userId = 1; //$_SESSION["userId"]; //what user's answers do we need
+
+//connect to db
+include('includes/dbconfig.php');
+
+//Get the All user's answers from the table
+$stmtLoadUserResults = $pdo->prepare("SELECT * FROM `questionansweruser` WHERE `userId` = '$userId'");
+
+$stmtLoadUserResults->execute();
+
+//variable to store the user tags
+$userTags= array();
+
+while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {  
+    //Loop through the db results and add only the tag on each row to the array.
+    //echo($results["answer"]); // answer as a string
+    
+    //add item to an array
+    array_push($userTags,$results["answer"]);
+    
+}
+
+print_r($userTags);
+
+$tagsJSON = json_encode($userTags);
+echo ($tagsJSON);
 
 ?>
 
@@ -19,97 +44,46 @@ include('getUserResultsTags.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='icon' type="image/png" sizes="32x32" href='../icon/favicon.png'>
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/userhome.css">
+    <link rel="stylesheet" href="css/feed-page.css">
 
-
-    <script>
-    //pass the PHP array of the users Tags TO javascript JSON
-    var tagsJSON = <?php echo($tagsJSON) ?>;
-    console.log(tagsJSON);
-
-    //var destinationsJSON;
-    
-    //document.addEventListener("load", loadDestinations);
-    loadDestinations()
-
-    function loadDestinations() {
-        //for (i=0; i < tagsJSON.length; i++) {
-            //Open up a asynchronous AJAX Connection
-        var xhr = new XMLHttpRequest(); 
-        xhr.onreadystatechange = function(e){     
-            console.log(xhr.readyState);     
-            if(xhr.readyState === 4){        
-                console.log(xhr.responseText);// modify or populate html elements based on response.
-                    //DOM Manipulation
-                //destinationsJSON    
-            } 
-        }
-
-        xhr.open("GET", "getByTagDestination.php", true); //true means it is asynchronous // Send variables through the url
-        xhr.send(); 
-
-
-
-       // }
-    }
-
-
-
-    </script>
 </head>
+
+<body>
 
 <?php
 include "navheader.html";
 ?>
 
-<body>
-<section class ="page">
-<div class = "message">
-    <h1 id="msg">Welcome, Tony Stark</h1>
+<div>
+<h1 id="title">Your Travel Feed based on your quiz...</h1>
 </div>
 
-<section class ="menu">
+<?php
 
-<div class="feed">
-    <h1 id="feedmsg">Your Travel Feed</h1>
-</div>
-
-<div class="mark">
-    <h1 id="markmsg">Your Mark'd Items</h1>
-</div>
-
-<div class="profile">
-    <h1 id="profilemsg">Your Profile</h1>
-</div>
-
-<div class="boards">
-    <h1 id="boardsmsg">Your Boards</h1>
-</div>
+//Load all Destinations for the Tags
+$stmtLoadDestinations = $pdo->prepare("SELECT `destinationId`, `destinationName`, `destinationDescription`, `city`, `country`, `tagName`, `imageLink`, `landingPageFlag`, `created_at` FROM `destination` WHERE `tagName` = '$userTags[0]' OR `tagName` = '$userTags[1]' OR `tagName` = '$userTags[2]' OR `tagName` = '$userTags[3]' ");
 
 
+$stmtLoadDestinations->execute();
 
 
-</section>
+while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 
-<div id="parentArticle">
-
-<?php 
-
-//cycles through
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    //cycles through
     echo("<div class='eachArticle'>");
     echo("<button type='submit' class='button'>Mark</button>");
-    ?><p id="name"><?php echo($row["destinationName"]);?></p> </br><?php
-    ?><p><?php echo($row["city"]); ?></p> </br><?php
-    ?><p><?php echo($row["country"]);?></p> </br><?php
+    ?><p id="name"><?php echo($result["destinationName"]);?></p> </br><?php
+    ?><p><?php echo($result["city"]); ?> </p> </br><?php
+    ?><p><?php echo($result["country"]);?></p> </br><?php
     echo("</div>");
+
+    
 }
 
 
 ?>
 
 
-</section>
 </body>
 </html>
 

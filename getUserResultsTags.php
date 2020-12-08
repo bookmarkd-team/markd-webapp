@@ -27,10 +27,10 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
     
 }
 
-//print_r($userTags);
+print_r($userTags);
 
 $tagsJSON = json_encode($userTags);
-//echo ($tagsJSON);
+echo ($tagsJSON);
 
 
 ?>
