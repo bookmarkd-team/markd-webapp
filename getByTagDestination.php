@@ -4,8 +4,8 @@
 session_start();
 
 //receive inputs
-$tagName = "";
- //$_POST["tagName"]; //which tag do I need destinations for?
+$tagName = "chill";
+ //$_GET["tagName"]; //which tag do I need destinations for?
 
 //connect to db
 include('includes/dbconfig.php');
@@ -23,7 +23,10 @@ if ($tagName != null) {
 
 $stmt->execute();
 
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
-    echo($row["destinationId"]); //list all the destinations that the selected user has lined
-}
+// while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
+//     echo($row["destinationId"]); //list all the destinations that the selected user has lined
+// }
+
+$destinationsJson = json_encode($results);
+echo($destinationsJson);
 ?>
