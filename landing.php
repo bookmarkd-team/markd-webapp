@@ -19,7 +19,9 @@
 <div class = "homenav">
 <nav>
   <ul>
+      <a href="landing.php">
       <img src="imgs/markd.png" id="logo"/>
+      </a>
       <li><a href="register-page.php">Register</a></li>
       <li><a href="sign-in.php">Login</a></li>
   </ul>
