@@ -21,18 +21,9 @@ include('quizLoad.php');
     <link rel="stylesheet" href="css/quiz.css">
 </head>
 
-<div class="topnav">
-<nav>
-  <ul>
-      <img src="imgs/markd.png" id="logo"/>
-      <li><a href="#">Feed</a></li>
-      <li><a href="#">Discover</a></li>
-      <li><a href="#">Quiz</a></li>
-      <li><a href="#">Your Boards</a></li>
-      <li id="home"><a href="#">Login</a></li>
-  </ul>
-</nav>
-</div>
+<?php
+    include "navheader.html";
+?>
 
 <body>
 
