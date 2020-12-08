@@ -23,7 +23,7 @@ if($row){
     $_SESSION["userId"] = $row["userId"];
 	//successful login
 	?><p>Welcome Back!</p>
-	<a href="homepage.php">Go to Home</a><?php
+	<a href="actualfeed.php">Go to Feed</a><?php
 
 }else{
 	//incorrect input
