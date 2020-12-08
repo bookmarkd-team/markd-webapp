@@ -9,15 +9,15 @@
 
 </head>
 <body>
-<section class="firstform"> 
+<section class="firstform">
 
-   
+
 
     <form action="registrationprocessing.php" method="POST" form id= "sign-in-form">
     <div>
     <p id="title">Sign Up</br></p>
     </div>
-    
+
     <div>
     <input type="text" name="firstName" id="firstName" placeholder="First name" required/>
 

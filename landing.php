@@ -20,7 +20,7 @@
 <nav>
   <ul>
       <img src="imgs/markd.png" id="logo" width=150px />
-      <li><a href="register.php">Register</a></li>
+      <li><a href="register-page.php">Register</a></li>
       <li><a href="sign-in.php">Login</a></li>
   </ul>
 </nav>
@@ -28,7 +28,7 @@
 
 <div class = "homecover">
     <h1 id="hometitle">Discover Your Endless Experience </h1>
-    <li id="discover"><a href="register.php">Start Discovering</a></li>
+    <li id="discover"><a href="register-page.php">Start Discovering</a></li>
 </div>
 
 <div class = "about">
@@ -43,7 +43,7 @@
     <p id="text"> Easy as 1, 2, 3! Complete a short quiz and recieve your Travel Personality.
         We take your quiz answers and generate a travel feed filled with destinations and
         experiences personalized by you!.</p>
-        <li id="discover"><a href="register.php">Start Quiz Now</a></li>
+        <li id="discover"><a href="register-page.php">Start Quiz Now</a></li>
 </div>
 
 
