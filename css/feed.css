@@ -7,7 +7,7 @@
 body{
  
     font: 25px Muli, sans-serif;  
-    color:#1B1948; 
+    color:white; 
     background-color:grey; 
    
 } 
@@ -35,7 +35,7 @@ flex-direction:row;
 
 }
 .eachArticle{
-
+color:white; 
 background-color: #1B1948;
 width:500px;
 height:500px; 
@@ -43,11 +43,33 @@ margin-top: 10px;
 margin-right: 10px;
 margin-bottom: 10px;
 margin-left: 10px;
+/* display:flex;
+align-items:center;
+flex-direction:column;  */
 
 
 
 }
+.back{
+    z-index:0;
+    width:100px;
+    height:100px; 
 
+}
+
+
+p{display:flex;
+    align-items:center;
+    justify-content:center; 
+    flex-direction:column; 
+    
+
+}
+
+#name{
+
+    margin-top:70px; 
+}
 .button{
     margin-top:10px; 
     margin-right:10px; 
