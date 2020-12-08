@@ -5,10 +5,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/sign-in.css">
+    <link rel="stylesheet" href="css/signin.css">
 </head>
 <body>
-    
+
 
     <section class="firstform">
     <form action="loginprocessing.php" method="POST" id="sign-in-form">
@@ -22,7 +22,7 @@
 
     <div id=formbutton>
     <button type="submit" value="Log In"  class="button">Login</button> </br>
-    <a href="register.html" class="link">Don't have an account? Sign up</a>
+    <a href="register.php" class="link">Don't have an account? Sign up</a>
     </div>
 
 

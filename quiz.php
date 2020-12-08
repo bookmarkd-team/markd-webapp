@@ -21,7 +21,6 @@ session_start();
 include('quizLoad.php');
 
 ?>
-
 <!DOCTYPE html>
 <html>
 <?php

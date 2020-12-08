@@ -1,6 +1,6 @@
 <?php
 //start session
-//session_start(); <-- commented out to this css out! 
+//session_start(); <-- commented out to this css out!
 
 include('includes/dbconfig.php');
 //GET quiz for quizId==1

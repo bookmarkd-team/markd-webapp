@@ -17,13 +17,13 @@ if ($tagName != null) {
 } else {
     //Run a SQL statement that selects all destinations because no tagName
     $stmt = $pdo->prepare("SELECT * FROM `destination`");
-    
+
 }
 
 
 $stmt->execute();
 
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
+while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo($row["destinationId"]); //list all the destinations that the selected user has lined
 }
 ?>
