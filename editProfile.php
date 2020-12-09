@@ -1,3 +1,5 @@
+<!-- Allo edit of user name, password and email -->
+
 <!DOCTYPE html>
 <html>
 <head>
