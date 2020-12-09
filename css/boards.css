@@ -1,71 +1,44 @@
-@font-face {
-    font-family: "Muli";
-    src: url("/muli/Muli.ttf") format("ttf");
-    src: url("/muli/Muli-Bold.ttf") format("ttf");
+.banner{
+    display:flex;
+    background-color: white;
+    flex-direction: column;
+    height:30vh;
 }
 
-body{
-
-    font: 25px Muli, sans-serif;  
-    color: #FFF9DF; 
- 
-} 
-
-
-
-#bio{
-  
-    display:flex; 
-    flex-direction:column; 
-    align-items:center; 
-    padding-top:50px; 
-    background-color:#1B1948; 
-
-
+.title{
+    font-size: 2.0em;
+    padding-left: 25px;
+    color:#ff7777;
 }
 
-#buttonArea{
-    background-color:#1B1948; 
-    width:auto;
-    height:80px; 
-    padding-right:20px; 
-}
-textarea{
-    resize:none; 
-     
+
+
+.create{
+    position: relative;
+    justify-content: flex-start;
+    align-self: flex-end;
+    background-color: #1B1948;
+    width:850px;   
+    bottom:150px;
 }
 
-.button{
-    
-    float:right;   
-    width: 170px;
-    height:50px;
-    border-radius:7px;
-    border-color:#FF7777;
-    border-style: solid;
-    background-color:#FF7777; 
-    font: 25px Muli, sans-serif;
+
+.image{
+    display:flex;
+    background-image: url("../imgs/cover2.jpg");
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#text1{
+    padding-left: 25px;
     color:#FFF9DF;
-    padding:0;
 }
-.button{
-    opacity: 0.85;
-    transition: 0.3s;
-    cursor: pointer;   
 
-}
-.button:hover {opacity: 1}
-
-.addButton{
-    position: fixed;
-    float:right;
-bottom:0; 
-
-    width: 200px;
-    height:50px;
-    border-radius:7px;
-    color:#FFF9DF; 
-    background-color:#1B1948; 
-    font: 25px Muli, sans-serif;    
-    padding:0;
+#text2{
+    padding-left: 25px;
+    color:#FFF9DF
 }
