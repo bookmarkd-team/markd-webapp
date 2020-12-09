@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mark'd - Discover Your Endless Experiences</title>
-    <meta charset="utf-8">
-    <meta name="description" content="travel experiences generator">
-    <meta name="keywords" content="travel, marking, planning, experiences, discovery">
-    <link rel="author" content="Mark'd Team" href="https://sheridancollege.ca" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php
+        include "meta.html";
+    ?>
+
     <link rel="stylesheet" href="css/landing-page.css">
-    <link rel='icon' type="image/png" sizes="32x32" href='icon/favicon.png'>
+    
 </head>
 </html>
 <!DOCTYPE html>
 <html>
 <body>
+
 <div class = "homenav">
 <nav>
   <ul>

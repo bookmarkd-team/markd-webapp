@@ -17,4 +17,4 @@ $stmt = $pdo->prepare("INSERT INTO `user`
 $stmt->execute();
 ?>
 <p>Thank you for signing up!</p>
-<a href="login.php">Go to Login</a>
+<a href="sign-in.php">Go to Login</a>

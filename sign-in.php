@@ -1,13 +1,17 @@
-<?php
-    include "navheader.html";
-?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/signin.css">
+    <?php
+        include "meta.html";
+    ?>
+    <link rel="stylesheet" href="css/sign-in.css">
 </head>
 <body>
+
+<?php
+    include "navheader.html";
+?>
 
 
     <section class="firstform">
