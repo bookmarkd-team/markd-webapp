@@ -22,8 +22,8 @@ if($row){
     //session declarations
     $_SESSION["userId"] = $row["userId"];
 	//successful login
-	?><p>Welcome Back!</p>
-	<a href="homepage.php">Go to Home</a><?php
+	?><p>Welcome! Take the Travel Quiz</p> <!-- UPDATED for demo run, change back to "Welcome Back" after Tuesday -->
+	<a href="quiz.php">Go to Travel Quiz</a><?php
 
 }else{
 	//incorrect input
