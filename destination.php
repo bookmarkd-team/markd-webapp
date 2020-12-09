@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/quiz.css">
     <link rel="stylesheet" href="css/destination.css">
 </head>
-
 <div class="topnav">
 <nav>
   <ul>
@@ -25,32 +24,19 @@
   </ul>
 </nav>
 </div>
-
 <body>
 <div class="banner">
     <div class="title">
+    <!-- echo content here for php  -->
         <h1>Tokyo, Japan</h1>
             <h2>Shopping District</h2>
     </div>
-    
-<div class="board">
-    <h1 id="text1">Add to Existing Boards</h1>
-</div>
-
 <div class="create">
-    <h1 id="text2">Create New Board</h1>
+    <h1 id="text2">Mark this destination</h1>
 </div>
-
-
 </div>
-
 <div class="image">
+    <!-- echo image here for php  -->
 </div>
-
-
-
-
-
-
 </body>
 </html>
