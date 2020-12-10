@@ -31,7 +31,6 @@ WHERE `user` . `userId` = $userId");
 
 $stmt->execute();
 ?>
-?>
 
 <div id="all">
 <div id="profile">  
