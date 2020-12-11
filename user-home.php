@@ -89,18 +89,12 @@ while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 }
 
 ?>
-<<<<<<< HEAD
 
 <!-- Linking JavaScript. Saving User id as javascript variable too  -->
 <script src="markd.js">
     var userId= <?php echo $userId ?>;
 </script>
 
-=======
-</div>
-<!-- Linking JavaScript -->
-<script src="markd.js"> </script>
->>>>>>> 59bea9eb05b085ea81a8c8f0315254f2cd5299c0
 
 </body>
 </html>
