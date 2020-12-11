@@ -57,5 +57,6 @@ include('navheader.html');
     <!-- echo image here for php  -->
     <!-- <p><img src="imgs/<?php echo ($row["imageLink"]);?>" id="picture"/></p>
 </div> -->
+<script src="markd.js"></script>
 </body>
 </html>
