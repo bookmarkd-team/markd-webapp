@@ -2,7 +2,7 @@
 
 //start session
 session_start();
-
+include('includes/navheader.html');
 //receive inputs
 $userId = 1; //$_SESSION["userId"]; //what user's answers do we need
 
