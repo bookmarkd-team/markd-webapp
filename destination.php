@@ -40,6 +40,7 @@ $destinationId = $_GET["destinationId"];
     <!-- markd button -->
     <h1 id="text2">Mark this destination</h1>
     <button data-destination ='<?php echo($row["destinationId"]);?>' type='submit' class='button'>Mark</button>
+    <!-- not sure if we need the data-* attribute ^here^... we can get rid of that part if necessary -->
 </div>
 </div>
 <div class="image">
