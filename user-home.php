@@ -86,15 +86,6 @@ while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
     </div>
     
 
-        <div class='eachArticle' style="background-image: url(' <?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
-        <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
-        <p id="name"><?php echo($result["destinationName"]);?></p> </br>
-        <p><?php echo($result["city"]); ?> </p> </br>
-        <p><?php echo($result["country"]);?></p> </br>
-        <button type="submit" class="button">
-	    <a href="destination.php?destinationId=<?php echo($result["destinationId"]);?>">Discover</a>
-	    </button>
-        </div>
 
         <?php
     }
