@@ -65,28 +65,31 @@ echo ($destinationJSON);
 
 <?php
 
-//Load all Destinations for the Tags
-//imporve this place to get destinations for each destinationID in the array and  and make a giant destination array to hold all the results 
-$stmtLoadDestinations = $pdo->prepare("SELECT `destinationId`, `destinationName`, `destinationDescription`, `city`, `country`, `tagName`, `imageLink`, `landingPageFlag`, `created_at` FROM `destination` WHERE `destinationId` = '$userSavedDestinations[0]' OR `tagName` = '$userSavedDestinations[1]' OR `tagName` = '$userSavedDestinations[2]' OR `tagName` = '$userSavedDestinations[3]' ");
+//Load all saved Destinations for  user
 
+for ($i = 0; $i < count($userSavedDestinations); $i++){
+
+$stmtLoadDestinations = $pdo->prepare("SELECT `destinationId`, `destinationName`, `destinationDescription`, `city`, `country`, `tagName`, `imageLink`, `landingPageFlag`, `created_at` FROM `destination` WHERE `destinationId` = '$userSavedDestinations[$i]'");
 
 $stmtLoadDestinations->execute();
 
 
-while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
+    while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 
-    //cycles through
-    ?>
-    <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
-    <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
-    <p id="name"><?php echo($result["destinationName"]);?></p> </br>
-    <p><?php echo($result["city"]); ?> </p> </br>
-    <p><?php echo($result["country"]);?></p> </br>
-    </div>
+        //cycles through
+        ?>
+        <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
+        <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
+        <p id="name"><?php echo($result["destinationName"]);?></p> </br>
+        <p><?php echo($result["city"]); ?> </p> </br>
+        <p><?php echo($result["country"]);?></p> </br>
+        </div>
 
 
 
-    <?php
+        <?php
+    }
+
 }
 
 ?>
