@@ -1,5 +1,12 @@
 
 // create code to access any marked button with a data-destination attribute 
+var markdButtons = document.querySelectorAll('.button[data-destination]');
+
+console.log(markdButtons);
+
+console.log("works");
+
+
 
 // add an event listener 
 

@@ -47,7 +47,6 @@ echo ($tagsJSON);
     <link rel="stylesheet" href="css/feed-page.css">
 
 
-
 </head>
 
 <body>
@@ -67,6 +66,8 @@ for ($i = 0; $i < count($userTags); $i++){
 
 $stmtLoadDestinations = $pdo->prepare("SELECT `destinationId`, `destinationName`, `destinationDescription`, `city`, `country`, `tagName`, `imageLink`, `landingPageFlag`, `created_at` FROM `destination` WHERE `tagName` = '$userTags[$i]' ");
 
+//repeat tags... old quiz answers 
+
 $stmtLoadDestinations->execute();
 
 
@@ -75,7 +76,7 @@ $stmtLoadDestinations->execute();
         //cycles through
         ?>
         <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
-        <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
+        <button data-destination='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
         <p id="name"><?php echo($result["destinationName"]);?></p> </br>
         <p><?php echo($result["city"]); ?> </p> </br>
         <p><?php echo($result["country"]);?></p> </br>
@@ -85,13 +86,11 @@ $stmtLoadDestinations->execute();
     }
 }
 
-
-
-
 ?>
 
 <!-- Linking JavaScript -->
 <script src="markd.js"> </script>
+
 </body>
 </html>
 
