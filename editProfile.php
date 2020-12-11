@@ -3,7 +3,8 @@
 //updates user details in user table 
 //start session
 session_start();
-include "navheader.html"; 
+include ("meta.html");
+include ("navheader.html"); 
 ?> 
 <!DOCTYPE html>
 <html>
@@ -30,7 +31,6 @@ $stmt = $pdo->prepare("SELECT * FROM `user`
 WHERE `user` . `userId` = $userId");
 
 $stmt->execute();
-$row = $stmt->fetch(PDO:: FETCH_ASSOC);
 ?>
 
 <div id="all">
@@ -42,15 +42,25 @@ $row = $stmt->fetch(PDO:: FETCH_ASSOC);
 <div id="form">
 <form id="editProfile" action="editUserDetails.php" method="POST" enctype="multipart/form-data">
 <label id="title"> Your Profile </label></br> 
-<label>First Name:</label><input type="text" id="firstName" placeholder="<?php echo($row[$firstName]);?>"> </br>
-<label>Last Name:</label><input type="text" id="lastName" placeholder="<?php echo($row[$lastName]);?>" > </br>
-<label>Email Address:</label><input type="text" id="emailAddress" placeholder="<?php echo($row[$emailAddress]);?>" ></br>
-<label>Password:</label><input type="password" id="password" placeholder="<?php echo($row[$password]);?>"></br>
-<button type="submit" value="update" class="button">Update Account Info</button></br>
+<label>First Name:</label><input type="text" id="firstName" placeholder="<?php echo($firstName);?>"> </br>
+<label>Last Name:</label><input type="text" id="lastName" placeholder="<?php echo($lastName);?>" > </br>
+<label>Email Address:</label><input type="text" id="emailAddress" placeholder="<?php echo($emailAddress);?>" ></br>
+<label>Password:</label><input type="password" id="password" placeholder="<?php echo($password);?>"></br>
+<button type="submit" value="update" id="submit-data" class="button">Update Account Info</button></br>
 </form>
 </div>
 </div>
 
+<script>
+let submitData = document.querySelectorAll("#submit-data")[0];
+let form = document.querySelectorAll("#editProfile")[0];
+let fName = document.querySelectorAll("#firstName")[0];
+let lName = document.querySelectorAll("#lastName")[0];
+let emailAddress = document.querySelectorAll("#emailAddress")[0];
+let password = document.querySelectorAll("#password")[0];
+
+
+</script>
 </body>
 
 </html>

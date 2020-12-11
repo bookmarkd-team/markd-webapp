@@ -1,6 +1,8 @@
 <?php 
 session_start();
-//start session ?>
+//start session 
+include('navheader.html');
+?>
 
 <!DOCTYPE html>
 <html>
@@ -19,8 +21,9 @@ session_start();
 
 <body>
 <?php //stmt and pdo and dbgonfig
-    $destinationId = $_GET["destinationId"];
     include("includes/dbconfig.php");
+    $destinationId = $_GET["destinationId"];
+    
 
     $stmt = $pdo->prepare("SELECT * FROM `destination`
     WHERE `destinationId` = '$destinationId'");

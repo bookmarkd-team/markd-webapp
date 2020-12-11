@@ -2,7 +2,7 @@
 
 //start session
 session_start();
-
+include('includes/navheader.html');
 //receive inputs
 $userId = 1; //$_SESSION["userId"]; //what user's answers do we need
 
@@ -70,16 +70,31 @@ $stmtLoadDestinations = $pdo->prepare("SELECT `destinationId`, `destinationName`
 
 $stmtLoadDestinations->execute();
 
+<<<<<<< HEAD
+=======
+    //cycles through
+    ?>
+    <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
+    <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
+    <p id="name"><?php echo($result["destinationName"]);?></p> </br>
+    <p><?php echo($result["city"]); ?> </p> </br>
+    <p><?php echo($result["country"]);?></p> </br>
+    <button type="submit" class="button">
+	<a href="destination.php?destinationId=<?php echo($row["destinationId"]);?>">Discover</a>
+	</button>
+    </div>
+>>>>>>> 0789b24bfa1de2916bb69d17ebc42bcbe18102ab
 
     while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 
-        //cycles through
-        ?>
         <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
-        <button data-destination='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
+        <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
         <p id="name"><?php echo($result["destinationName"]);?></p> </br>
         <p><?php echo($result["city"]); ?> </p> </br>
         <p><?php echo($result["country"]);?></p> </br>
+        <button type="submit" class="button">
+	    <a href="destination.php?destinationId=<?php echo($row["destinationId"]);?>">Discover</a>
+	    </button>
         </div>
 
         <?php
