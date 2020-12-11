@@ -58,7 +58,7 @@ include "navheader.html";
 <div>
 <h1 id="title">Your Travel Feed based on your quiz...</h1>
 </div>
-
+<div class="parentArticle">
 <?php
 
 //Load all Destinations for the Tags
@@ -67,10 +67,7 @@ for ($i = 0; $i < count($userTags); $i++){
 $stmtLoadDestinations = $pdo->prepare("SELECT `destinationId`, `destinationName`, `destinationDescription`, `city`, `country`, `tagName`, `imageLink`, `landingPageFlag`, `created_at` FROM `destination` WHERE `tagName` = '$userTags[$i]' ");
 
 $stmtLoadDestinations->execute();
-?>
 
-<div class="parentArticle">
-<?php
 while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 
     //cycles through
@@ -92,7 +89,7 @@ while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 }
 
 ?>
-
+</div>
 <!-- Linking JavaScript -->
 <script src="markd.js"> </script>
 
