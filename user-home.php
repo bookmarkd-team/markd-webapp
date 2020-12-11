@@ -47,7 +47,6 @@ echo ($tagsJSON);
     <link rel="stylesheet" href="css/feed-page.css">
 
 
-
 </head>
 
 <body>
@@ -63,36 +62,39 @@ include "navheader.html";
 <?php
 
 //Load all Destinations for the Tags
-//imporve this place to get destinations for each tag in the array and  and make a giant destination array to hold all the results 
-$stmtLoadDestinations = $pdo->prepare("SELECT `destinationId`, `destinationName`, `destinationDescription`, `city`, `country`, `tagName`, `imageLink`, `landingPageFlag`, `created_at` FROM `destination` WHERE `tagName` = '$userTags[0]' OR `tagName` = '$userTags[1]' OR `tagName` = '$userTags[2]' OR `tagName` = '$userTags[3]' ");
+for ($i = 0; $i < count($userTags); $i++){
 
+$stmtLoadDestinations = $pdo->prepare("SELECT `destinationId`, `destinationName`, `destinationDescription`, `city`, `country`, `tagName`, `imageLink`, `landingPageFlag`, `created_at` FROM `destination` WHERE `tagName` = '$userTags[$i]' ");
+
+//repeat tags... old quiz answers 
 
 $stmtLoadDestinations->execute();
 
 
-while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
+    while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 
-    //cycles through
-    ?>
-    <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
-    <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
-    <p id="name"><?php echo($result["destinationName"]);?></p> </br>
-    <p><?php echo($result["city"]); ?> </p> </br>
-    <p><?php echo($result["country"]);?></p> </br>
-    <button type="submit" class="button">
-	<a href="destination.php?destinationId=<?php echo($row["destinationId"]);?>">Discover</a>
-	</button>
-    </div>
+        //cycles through
+        ?>
 
+        <div class='eachArticle' style="background-image: url(' <?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
+        <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
+        <p id="name"><?php echo($result["destinationName"]);?></p> </br>
+        <p><?php echo($result["city"]); ?> </p> </br>
+        <p><?php echo($result["country"]);?></p> </br>
+        <button type="submit" class="button">
+	    <a href="destination.php?destinationId=<?php echo($result["destinationId"]);?>">Discover</a>
+	    </button>
+        </div>
 
-
-    <?php
+        <?php
+    }
 }
 
 ?>
 
 <!-- Linking JavaScript -->
 <script src="markd.js"> </script>
+
 </body>
 </html>
 
