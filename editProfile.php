@@ -39,9 +39,10 @@ $stmt->execute();
 <label id="profile">Hello</label>
 </div>
 
-<p id="thanks" style="display:none;">Profile Updated!</p> <!--this needs to be styled! PLEASE AND TY-->
+
    
 <div id="form">
+<p id="thanks" style="display:none;">Profile Updated!</p> 
 <form id="editProfile">
 <label id="title"> Your Profile </label></br> 
 <label>First Name:</label><input type="text" id="firstName" placeholder="<?php echo($firstName);?>"></br>
@@ -49,6 +50,8 @@ $stmt->execute();
 <label>Email Address:</label><input type="text" id="emailAddress" placeholder="<?php echo($emailAddress);?>"></br>
 <label>Password:</label><input type="password" id="password" placeholder="<?php echo($password);?>"></br>
 <button type="submit" value="update" id="update-data" class="button">Update Account Info</button></br>
+
+
 </form>
 </div>
 </div>
@@ -78,7 +81,7 @@ $stmt->execute();
             } 
             //DOM manipulation
             form.style.display= 'none';
-            thanks.style.display = 'block';
+            thanks.style.display = 'flex';
 
         };
         
