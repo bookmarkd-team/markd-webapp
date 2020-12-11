@@ -79,6 +79,9 @@ while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
     <p id="name"><?php echo($result["destinationName"]);?></p> </br>
     <p><?php echo($result["city"]); ?> </p> </br>
     <p><?php echo($result["country"]);?></p> </br>
+    <button type="submit" class="button">
+	<a href="destination.php?destinationId=<?php echo($row["destinationId"]);?>">Discover</a>
+	</button>
     </div>
 
 
