@@ -15,7 +15,7 @@ include('navheader.html');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='icon' type="image/png" sizes="32x32" href='../icon/favicon.png'>
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/quiz.css">
+   
     <link rel="stylesheet" href="css/destination.css">
 </head>
 
@@ -32,24 +32,30 @@ include('navheader.html');
     $row = $stmt->fetch(PDO:: FETCH_ASSOC);
 ?>
 
-<div class="banner">
-    <div class="title">
+
+    <div class="title" style="background-image: url(imgs/<?php echo ($row["imageLink"]);?>);  background-size: cover; background-position:center; background-repeat: no-repeat; ">
     <!-- echo content here for php  -->
+   
+    <div class="banner">
+    
         <h1><?php echo($row["destinationName"]);?></h1>
             <h2><?php echo ($row["city"]);?></h2>
             <h2><?php echo ($row["country"]);?></h2>
             <p><?php echo ($row["destinationDescription"]);?></p>
+            <button data-destination ='<?php echo($row["destinationId"]);?>' type="submit" class="button">Mark</button>
+
     </div>
-<div class="create">
+    </div>
+
     <!-- markd button -->
-    <h1 id="text2">Mark this destination</h1>
-    <button data-destination ='<?php echo($row["destinationId"]);?>' type='submit' class='button'>Mark</button>
+    
+    
     <!-- not sure if we need the data-* attribute ^here^... we can get rid of that part if necessary -->
-</div>
-</div>
-<div class="image">
+
+<!-- </div> -->
+<!-- <div class="image"  style="background-image: url(imgs/<?php echo ($row["imageLink"]);?>)"> -->
     <!-- echo image here for php  -->
-    <p><img src="imgs/<?php echo ($row["imageLink"]);?>"/></p>
-</div>
+    <!-- <p><img src="imgs/<?php echo ($row["imageLink"]);?>" id="picture"/></p>
+</div> -->
 </body>
 </html>

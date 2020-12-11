@@ -26,13 +26,16 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
     
 }
 
-print_r($userTags);
+// print_r($userTags);
 
 $tagsJSON = json_encode($userTags);
-echo ($tagsJSON);
+// echo ($tagsJSON);
 
 ?>
 
+<?php
+include "navheader.html";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,21 +47,18 @@ echo ($tagsJSON);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='icon' type="image/png" sizes="32x32" href='../icon/favicon.png'>
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/feed-page.css">
+    <link rel="stylesheet" href="css/user-home.css">
 
 
 </head>
 
 <body>
 
-<?php
-include "navheader.html";
-?>
 
 <div>
 <h1 id="title">Your Travel Feed based on your quiz...</h1>
 </div>
-
+<div class="parentArticle">
 <?php
 
 //Load all Destinations for the Tags
@@ -66,37 +66,41 @@ for ($i = 0; $i < count($userTags); $i++){
 
 $stmtLoadDestinations = $pdo->prepare("SELECT `destinationId`, `destinationName`, `destinationDescription`, `city`, `country`, `tagName`, `imageLink`, `landingPageFlag`, `created_at` FROM `destination` WHERE `tagName` = '$userTags[$i]' ");
 
-//repeat tags... old quiz answers 
-
 $stmtLoadDestinations->execute();
 
+while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 
-    while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
+    //cycles through
+    ?>
+    <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
+    <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' id="mark">Mark</button>
+    <div class="content">
+    <p id="name"><?php echo($result["destinationName"]);?></p> </br>
+    <p><?php echo($result["city"]); ?> </p> </br>
+    <p><?php echo($result["country"]);?></p> </br>
+    <button type="submit" id="discover"><a href="destination.php?destinationId=<?php echo($result["destinationId"]);?>">Discover</a></button>
+    </div>
+    </div>
+    
 
-        //cycles through
-        ?>
-
-        <div class='eachArticle' style="background-image: url(' <?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
-        <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
-        <p id="name"><?php echo($result["destinationName"]);?></p> </br>
-        <p><?php echo($result["city"]); ?> </p> </br>
-        <p><?php echo($result["country"]);?></p> </br>
-        <button type="submit" class="button">
-	    <a href="destination.php?destinationId=<?php echo($result["destinationId"]);?>">Discover</a>
-	    </button>
-        </div>
 
         <?php
     }
 }
 
 ?>
+<<<<<<< HEAD
 
 <!-- Linking JavaScript. Saving User id as javascript variable too  -->
 <script src="markd.js">
     var userId= <?php echo $userId ?>;
 </script>
 
+=======
+</div>
+<!-- Linking JavaScript -->
+<script src="markd.js"> </script>
+>>>>>>> 59bea9eb05b085ea81a8c8f0315254f2cd5299c0
 
 </body>
 </html>
