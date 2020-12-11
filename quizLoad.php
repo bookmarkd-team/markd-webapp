@@ -1,6 +1,6 @@
 <?php
 //start session
-session_start();
+
 
 include('includes/dbconfig.php');
 //GET quiz for quizId==1

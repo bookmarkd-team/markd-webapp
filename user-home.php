@@ -33,6 +33,9 @@ $tagsJSON = json_encode($userTags);
 
 ?>
 
+<?php
+include "navheader.html";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,9 +54,6 @@ $tagsJSON = json_encode($userTags);
 
 <body>
 
-<?php
-include "navheader.html";
-?>
 
 <div>
 <h1 id="title">Your Travel Feed based on your quiz...</h1>
