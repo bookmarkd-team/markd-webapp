@@ -92,8 +92,11 @@ $stmtLoadDestinations->execute();
 
 ?>
 
-<!-- Linking JavaScript -->
-<script src="markd.js"> </script>
+<!-- Linking JavaScript. Saving User id as javascript variable too  -->
+<script src="markd.js">
+    var userId= <?php echo $userId ?>;
+</script>
+
 
 </body>
 </html>
