@@ -1,6 +1,6 @@
 <!-- 
-show name, picture, edit profile page 
-getUserDetails.php 
+show name, picture, edit profile page
+getUserDetails.php
 
 and All destinations that user has marked.
 "get-user-likes" (php)
@@ -26,13 +26,13 @@ $stmtLoadUserResults->execute();
 //variable to store the user tags
 $userSavedDestinations= array();
 
-while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {  
+while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
     //Loop through the db results and add only the tag on each row to the array.
     //echo($results["destinationId"]); // answer as a string
-    
+
     //add item to an array
     array_push($userSavedDestinations,$results["destinationId"]);
-    
+
 }
 
 print_r($userSavedDestinations);
@@ -47,20 +47,20 @@ echo ($destinationJSON);
 <head>
 <title></title>
 </head>
-<link rel="stylesheet" href="css/boards.css"> 
-<link rel="stylesheet" href="css/feed-page.css"> 
+<link rel="stylesheet" href="css/boards.css">
+<link rel="stylesheet" href="css/feed-page.css">
 <div id="bio">
 <img src="pig.jpg" height=200 width=200 alt="profile-picture"/> </br>
 <label id=name>Full Name</label> </br>
-<textarea id="bio" name="bio" rows="5" cols="100"> </textarea> </br> 
-<label id=boards>Boards</label> </br> 
+<textarea id="bio" name="bio" rows="5" cols="100"> </textarea> </br>
+<label id=boards>Boards</label> </br>
  </div>
 <div id="buttonArea">
-<a href="edit-boards.html"><button class="button">Edit Profile</button></a></br> 
+<a href="edit-boards.html"><button class="button">Edit Profile</button></a></br>
 </div>
 <body>
 
-<a href="add-board.html" ><button class="addButton"> Add A Board </button></a> 
+<a href="add-board.html" ><button class="addButton"> Add A Board </button></a>
 
 
 <?php

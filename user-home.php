@@ -2,7 +2,7 @@
 
 //start session
 session_start();
-include('includes/navheader.html');
+include('navheader.html');
 //receive inputs
 $userId = 1; //$_SESSION["userId"]; //what user's answers do we need
 
@@ -17,13 +17,13 @@ $stmtLoadUserResults->execute();
 //variable to store the user tags
 $userTags= array();
 
-while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {  
+while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
     //Loop through the db results and add only the tag on each row to the array.
     //echo($results["answer"]); // answer as a string
-    
+
     //add item to an array
     array_push($userTags,$results["answer"]);
-    
+
 }
 
 // print_r($userTags);
@@ -48,7 +48,6 @@ include "navheader.html";
     <link rel='icon' type="image/png" sizes="32x32" href='../icon/favicon.png'>
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/user-home.css">
-
 
 </head>
 
@@ -81,7 +80,7 @@ while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
     <button type="submit" id="discover"><a href="destination.php?destinationId=<?php echo($result["destinationId"]);?>">Discover</a></button>
     </div>
     </div>
-    
+
 
 
         <?php
@@ -98,5 +97,3 @@ while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 
 </body>
 </html>
-
-
