@@ -3,7 +3,7 @@
 //start session
 session_start();
 
-//receive inputs
+//receive inputs chaneg string belowe to POST variables
 $userId = 2; //$_SESSION["userId"]; //what user is updating deatils?
 $firstName = "Jamie";//$_POST["firstName"];
 $lastName = "Stewart";//$_POST["lastName"];

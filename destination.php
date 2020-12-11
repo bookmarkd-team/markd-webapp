@@ -1,3 +1,7 @@
+<?php//start session
+session_start();
+$destinationId = $_GET["destinationId"];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,31 +16,35 @@
     <link rel="stylesheet" href="css/quiz.css">
     <link rel="stylesheet" href="css/destination.css">
 </head>
-<div class="topnav">
-<nav>
-  <ul>
-      <img src="imgs/markd.png" id="logo"/>
-      <li><a href="#">Feed</a></li>
-      <li><a href="#">Discover</a></li>
-      <li><a href="#">Quiz</a></li>
-      <li><a href="#">Your Boards</a></li>
-      <li id="home"><a href="#">Login</a></li>
-  </ul>
-</nav>
-</div>
+
 <body>
+<?php //stmt and pdo and dbgonfig
+    include("includes/dbconfig.php");
+
+    $stmt = $pdo->prepare("SELECT * FROM `destination`
+    WHERE `destinationId` = '$destinationId'");
+
+    $stmt->execute();
+    $row = $stmt->fetch(PDO:: FETCH_ASSOC);
+?>
+
 <div class="banner">
     <div class="title">
     <!-- echo content here for php  -->
-        <h1>Tokyo, Japan</h1>
-            <h2>Shopping District</h2>
+        <h1><?php echo($row["destinationName"]);?></h1>
+            <h2><?php echo ($row["city"]);?></h2>
+            <h2><?php echo ($row["country"]);?></h2>
+            <p><?php echo ($row["destinationDescription"]);?></p>
     </div>
 <div class="create">
+    <!-- markd button -->
     <h1 id="text2">Mark this destination</h1>
+    <button data-destination ='<?php echo($row["destinationId"]);?>' type='submit' class='button'>Mark</button>
 </div>
 </div>
 <div class="image">
     <!-- echo image here for php  -->
+    <p><img src="imgs/<?php echo ($row["imageLink"]);?>"/></p>
 </div>
 </body>
 </html>

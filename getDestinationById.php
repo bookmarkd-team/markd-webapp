@@ -20,7 +20,6 @@ $row = $stmt->fetch(PDO:: FETCH_ASSOC);
     echo ($row["destinationDescription"]);
     echo ($row["city"]);
     echo ($row["country"]);
-    echo ($row["imageLink"]);
 
 
 ?>
