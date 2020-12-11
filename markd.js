@@ -4,11 +4,36 @@ var markdButtons = document.querySelectorAll('.button[data-destination]');
 
 console.log(markdButtons);
 
-console.log("works");
+console.log(markdButtons[0].dataset.destination);
+
+console.log(userId);
+
+// add an event listener to every button on the page
+for (i=0; i < markdButtons.length; i++){
+
+    markdButtons[i].addEventListener("click", markd);
+
+}
 
 
 
-// add an event listener 
+
+function markd(e){
+    //function that marks the destination in database.
+    
+    //console when mouse down
+    console.log("clicked");
+    //console the destination id for the sected destination
+    console.log(e.srcElement.dataset.destination);
+
+    let selectedDestination = e.srcElement.dataset.destination
+
+    //call check if saved function
+    checkIfSave(selectDestination, userId);
+    
+}
+
+
 
 //some varibale that tracks if destination is currently saved and changes front end accrodingly 
 
@@ -27,4 +52,51 @@ console.log("works");
 
 
     //}
+
+  
+function checkIfSave(destination, user){
+    var destinationSaved = false;
+    
+    //Open up a asynchronous AJAX Connection
+    var xhr = new XMLHttpRequest(); 
+    xhr.onreadystatechange = function(e){     
+        console.log(xhr.readyState);     
+        if(xhr.readyState === 4){        
+            console.log(xhr.responseText);// modify or populate html elements based on response.
+                //DOM Manipulation
+        } 
+    }
+
+   
+   
+    return destinationSaved
+
+}
+
+
+function save(destination){
+
+
+
+    //Open up a asynchronous AJAX Connection
+    var xhr = new XMLHttpRequest(); 
+    xhr.onreadystatechange = function(e){     
+        console.log(xhr.readyState);     
+        if(xhr.readyState === 4){        
+            console.log(xhr.responseText);// modify or populate html elements based on response.
+                //DOM Manipulation
+        } 
+    }
+
+    //Make call to to php script to do the insert
+    xhr.open("GET","saveDestinationProcessing.php",true); 
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    var postString = "userId=" + userId + "&destinationId=" + selectDestination[i] ; 
+    
+    console.log(postString);
+
+    xhr.send(postString);
+
+
+}
    
