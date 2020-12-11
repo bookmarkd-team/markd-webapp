@@ -51,12 +51,12 @@ echo ($destinationJSON);
 <link rel="stylesheet" href="css/feed-page.css"> 
 <div id="bio">
 <img src="pig.jpg" height=200 width=200 alt="profile-picture"/> </br>
-<label id=name>Full Name</label> </br>
+<label id="name">Full Name</label> </br>
 <textarea id="bio" name="bio" rows="5" cols="100"> </textarea> </br> 
-<label id=boards>Boards</label> </br> 
+<label id="boards">Boards</label> </br> 
  </div>
 <div id="buttonArea">
-<a href="edit-boards.html"><button class="button">Edit Profile</button></a></br> 
+<a href="editProfile.php?userId=<?php echo ($userId)?>"><button class="button">Edit Profile</button></a></br> 
 </div>
 <body>
 
