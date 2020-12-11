@@ -32,7 +32,6 @@ $tagsJSON = json_encode($userTags);
 // echo ($tagsJSON);
 
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
