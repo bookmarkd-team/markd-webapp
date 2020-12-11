@@ -70,30 +70,19 @@ $stmtLoadDestinations = $pdo->prepare("SELECT `destinationId`, `destinationName`
 
 $stmtLoadDestinations->execute();
 
-<<<<<<< HEAD
-=======
-    //cycles through
-    ?>
-    <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
-    <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
-    <p id="name"><?php echo($result["destinationName"]);?></p> </br>
-    <p><?php echo($result["city"]); ?> </p> </br>
-    <p><?php echo($result["country"]);?></p> </br>
-    <button type="submit" class="button">
-	<a href="destination.php?destinationId=<?php echo($row["destinationId"]);?>">Discover</a>
-	</button>
-    </div>
->>>>>>> 0789b24bfa1de2916bb69d17ebc42bcbe18102ab
 
     while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 
-        <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
+        //cycles through
+        ?>
+
+        <div class='eachArticle' style="background-image: url(' <?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
         <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
         <p id="name"><?php echo($result["destinationName"]);?></p> </br>
         <p><?php echo($result["city"]); ?> </p> </br>
         <p><?php echo($result["country"]);?></p> </br>
         <button type="submit" class="button">
-	    <a href="destination.php?destinationId=<?php echo($row["destinationId"]);?>">Discover</a>
+	    <a href="destination.php?destinationId=<?php echo($result["destinationId"]);?>">Discover</a>
 	    </button>
         </div>
 
