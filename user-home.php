@@ -33,9 +33,6 @@ $tagsJSON = json_encode($userTags);
 
 ?>
 
-<?php
-include "navheader.html";
-?>
 <!DOCTYPE html>
 <html>
 <head>
