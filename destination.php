@@ -1,7 +1,7 @@
-<?php//start session
+<?php 
 session_start();
-$destinationId = $_GET["destinationId"];
-?>
+//start session ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +19,7 @@ $destinationId = $_GET["destinationId"];
 
 <body>
 <?php //stmt and pdo and dbgonfig
+    $destinationId = $_GET["destinationId"];
     include("includes/dbconfig.php");
 
     $stmt = $pdo->prepare("SELECT * FROM `destination`
