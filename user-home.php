@@ -26,10 +26,10 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
     
 }
 
-print_r($userTags);
+// print_r($userTags);
 
 $tagsJSON = json_encode($userTags);
-echo ($tagsJSON);
+// echo ($tagsJSON);
 
 ?>
 
@@ -44,7 +44,7 @@ echo ($tagsJSON);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='icon' type="image/png" sizes="32x32" href='../icon/favicon.png'>
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/feed-page.css">
+    <link rel="stylesheet" href="css/user-home.css">
 
 
 
@@ -68,22 +68,24 @@ $stmtLoadDestinations = $pdo->prepare("SELECT `destinationId`, `destinationName`
 
 
 $stmtLoadDestinations->execute();
+?>
 
-
+<div class="parentArticle">
+<?php
 while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 
     //cycles through
     ?>
     <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
-    <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
+    <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' id="mark">Mark</button>
+    <div class="content">
     <p id="name"><?php echo($result["destinationName"]);?></p> </br>
     <p><?php echo($result["city"]); ?> </p> </br>
     <p><?php echo($result["country"]);?></p> </br>
-    <button type="submit" class="button">
-	<a href="destination.php?destinationId=<?php echo($row["destinationId"]);?>">Discover</a>
-	</button>
+    <button type="submit" id="discover"><a href="destination.php?destinationId=<?php echo($result["destinationId"]);?>">Discover</a></button>
     </div>
-
+    </div>
+    
 
 
     <?php

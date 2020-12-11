@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: "Muli";
     src: url("/muli/Muli.ttf") format("ttf");
@@ -12,7 +13,7 @@ html, body{
 body{
     font: 25px Muli, sans-serif;
     color:white;
-    background-color:grey;
+   
 }
 
 #title{
@@ -27,7 +28,7 @@ body{
 
 
 }
-#parentArticle{
+.parentArticle{
 position:relative;
 bottom:95px;
 display:flex;
@@ -40,25 +41,28 @@ flex-direction:row;
 color:white;
 background-color: #1B1948;
 width:500px;
-height:500px;
-margin-top: 10px;
-margin-right: 10px;
-margin-bottom: 10px;
-margin-left: 10px;
-/* display:flex;
-align-items:center;
-flex-direction:column;  */
-
-
-
-}
-.back{
-    z-index:0;
-    width:100px;
-    height:100px;
+height:600px;
+margin-top: 50px;
+margin-left:50px; 
+display:flex;
+flex-direction:column; 
 
 }
 
+.content{
+  
+    display:flex;
+    justify-content:center; 
+    align-items:center; 
+    flex-direction:column; 
+    text-align:center; 
+    background-color:rgba(100,100,100,0.5); 
+    margin-right:10px; 
+    margin-left:10px; 
+    margin-top:10px; 
+    padding-bottom:10px; 
+
+}
 
 p{display:flex;
     align-items:center;
@@ -72,10 +76,10 @@ p{display:flex;
 
     margin-top:70px;
 }
-.button{
+#mark{
     margin-top:10px;
-    margin-right:10px;
-    float:right;
+    margin-left:10px;
+    
     width: 100px;
     height:50px;
     border-radius:7px;
@@ -84,6 +88,27 @@ p{display:flex;
     background-color:#FF7777;
     font: 25px Muli, sans-serif;
     color:#FFF9DF;
+
+}
+
+#discover{
+
+    
+    width: 130px;
+    height:50px;
+    border-radius:7px;
+    border-color:#FF7777;
+    border-style: solid;
+    background-color:#FF7777;
+    font: 25px Muli, sans-serif;
+    color:#FFF9DF;
+
+}
+
+
+a{
+color:white; 
+text-decoration:none; 
 
 }
 .button{
