@@ -5,10 +5,10 @@ session_start();
 
 //receive inputs chaneg string belowe to POST variables
 $userId = 2; //$_SESSION["userId"]; //what user is updating deatils?
-$firstName = "Jamie";//$_POST["firstName"];
-$lastName = "Stewart";//$_POST["lastName"];
-$emailAddress = "j.stewart@email.com";//$_POST["emailAddress"];
-$password = "87654321";//$_POST["password"];
+$firstName = $_POST["firstName"];
+$lastName = $_POST["lastName"];
+$emailAddress = $_POST["emailAddress"];
+$password = $_POST["password"];
 
 //connect to db
 include('includes/dbconfig.php');

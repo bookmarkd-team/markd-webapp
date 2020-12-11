@@ -15,14 +15,14 @@ include ("navheader.html");
 <body>
 <?php // php integration variable and db config
 //receive inputs
-$userId = $_SESSION["userId"]; //what user is updating deatils?
+
 
 //receive inputs
 $userId = 2; //$_SESSION["userId"]; //what user is updating deatils?
-$firstName = "Jamie";//$_GET["firstName"];
-$lastName = "Stewart";//$_GET["lastName"];
-$emailAddress = "j.stewart@email.com";//$_GET["emailAddress"];
-$password = "87654321";//$_GET["password"];
+$firstName = "test";//$_GET["firstName"];
+$lastName = "tester";//$_GET["lastName"];
+$emailAddress = "tester@email.com";//$_GET["emailAddress"];
+$password = "4352";//$_GET["password"];
 
 //connect to db
 include('includes/dbconfig.php');
@@ -39,27 +39,58 @@ $stmt->execute();
 <label id="profile">Hello</label>
 </div>
 
+<p id="thanks" style="display:none;">Profile Updated!</p> <!--this needs to be styled! PLEASE AND TY-->
+   
 <div id="form">
-<form id="editProfile" action="editUserDetails.php" method="POST" enctype="multipart/form-data">
+<form id="editProfile">
 <label id="title"> Your Profile </label></br> 
-<label>First Name:</label><input type="text" id="firstName" placeholder="<?php echo($firstName);?>"> </br>
-<label>Last Name:</label><input type="text" id="lastName" placeholder="<?php echo($lastName);?>" > </br>
-<label>Email Address:</label><input type="text" id="emailAddress" placeholder="<?php echo($emailAddress);?>" ></br>
+<label>First Name:</label><input type="text" id="firstName" placeholder="<?php echo($firstName);?>"></br>
+<label>Last Name:</label><input type="text" id="lastName" placeholder="<?php echo($lastName);?>"></br>
+<label>Email Address:</label><input type="text" id="emailAddress" placeholder="<?php echo($emailAddress);?>"></br>
 <label>Password:</label><input type="password" id="password" placeholder="<?php echo($password);?>"></br>
-<button type="submit" value="update" id="submit-data" class="button">Update Account Info</button></br>
+<button type="submit" value="update" id="update-data" class="button">Update Account Info</button></br>
 </form>
 </div>
 </div>
 
 <script>
-let submitData = document.querySelectorAll("#submit-data")[0];
-let form = document.querySelectorAll("#editProfile")[0];
-let fName = document.querySelectorAll("#firstName")[0];
-let lName = document.querySelectorAll("#lastName")[0];
-let emailAddress = document.querySelectorAll("#emailAddress")[0];
-let password = document.querySelectorAll("#password")[0];
+    let updateData = document.querySelectorAll("#update-data")[0];
+    let form = document.querySelectorAll("#editProfile")[0];
+    let firstName = document.querySelectorAll("#firstName")[0];
+    let lastName = document.querySelectorAll("#lastName")[0];
+    let emailAddress = document.querySelectorAll("#emailAddress")[0];
+    let password = document.querySelectorAll("#password")[0];
+    let thanks = document.querySelectorAll("#thanks")[0];
 
+    console.log(firstName);
 
+    updateData.addEventListener('click', updateDataEv, false);
+
+    function updateDataEv(event){
+        event.preventDefault();
+        console.log(firstName.value); //check to see if it's working
+
+        var xhr = new XMLHttpRequest(); 
+        xhr.onreadystatechange = function(e){     
+            console.log(xhr.readyState);     
+            if(xhr.readyState === 4){        
+                console.log("CHECK DB TABLE");// modify or populate html elements based on response.
+            } 
+            //DOM manipulation
+            form.style.display= 'none';
+            thanks.style.display = 'block';
+
+        };
+        
+        var requestData = "firstName="+firstName.value+"&lastName="+lastName.value+"&emailAddress="+emailAddress.value+"&password="+password.value;
+        xhr.open("POST", "editUserDetails.php", true); 
+         console.log(requestData);
+        //true means it is asynchronous 
+        // Send variables through the url
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send(requestData);
+
+    }
 </script>
 </body>
 
