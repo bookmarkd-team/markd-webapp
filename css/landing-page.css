@@ -9,7 +9,8 @@
   }
   
   body{
-      font: 25px Muli, sans-serif;
+      font-family: Muli;
+      font-size:25px;
   }
   
   .homecover{
@@ -70,6 +71,15 @@
       background-color: #1B1948;
   }
   
+.homenav{
+    z-index:10;
+    position:sticky;
+    top:0; 
+    font-family: Muli;
+    justify-content: center;
+    width:100%;
+    
+}
   #logo{
       float:left;
       margin: 30px;

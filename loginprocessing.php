@@ -24,7 +24,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 <html>
 <head>
 <link rel="stylesheet" href="css/login-processing.css">
-<link rel="stylesheet" href="css/navbar.css">  
+  
 </head>
 
 <body>

@@ -1,14 +1,22 @@
 @font-face {
-    font-family: "Muli";
+    font-family: Muli;
     src: url("/Muli.ttf") format("ttf");
     src: url("/muli/Muli-Bold.ttf") format("ttf");
   }
   
- 
+
+  html, body{
+   
+    margin: 0px;
+    padding: 0px;
+   
+  }
+   
+
   
   body{
     background-color:black; 
-    font: 25px Muli, sans-serif;
+  
     color: #FFF9DF;
     background-color:grey;
   }

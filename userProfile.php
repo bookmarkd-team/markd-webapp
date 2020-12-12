@@ -8,7 +8,7 @@ getDestinationById.php -->
 
 
 <?php
-
+include "navheader.html"; 
 //start session
 session_start();
 

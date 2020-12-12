@@ -4,14 +4,15 @@
     src: url("/muli/Muli-Bold.ttf") format("ttf");
 }
 
-body{
-    
-    font: 25px Muli, sans-serif;  
-    color: #1B1948; 
-    
-    
 
-} 
+
+html, body{
+  font-family:Muli; 
+  margin: 0px;
+  padding: 0px;
+  font-size:25px; 
+}
+ 
 
 #all{
      display:flex;  

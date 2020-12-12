@@ -4,6 +4,7 @@
 session_start();
 
 //Quiz Page. Loads The Quiz In a page
+include "navheader.html";
 include('quizLoad.php');
 
 
@@ -20,9 +21,7 @@ include('quizLoad.php');
 
 <body>
 
-<?php
-    include "navheader.html";
-?>
+
 
 <div class="cover">
 <div class="cover-text">
