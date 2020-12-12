@@ -12,6 +12,7 @@ getDestinationById.php -->
 //start session
 session_start();
 
+
 //receive inputs
 $userId = 1; //$_SESSION["userId"]; //what user's answers do we need
 
@@ -35,10 +36,10 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 
 }
 
-print_r($userSavedDestinations);
+// print_r($userSavedDestinations);
 
 $destinationJSON = json_encode($userSavedDestinations);
-echo ($destinationJSON);
+// echo ($destinationJSON);
 
 ?>
 
@@ -47,20 +48,20 @@ echo ($destinationJSON);
 <head>
 <title></title>
 </head>
-<link rel="stylesheet" href="css/boards.css">
-<link rel="stylesheet" href="css/feed-page.css">
+<link rel="stylesheet" href="css/userProfile.css">
+
 <div id="bio">
 <img src="pig.jpg" height=200 width=200 alt="profile-picture"/> </br>
-<label id="name">Full Name</label> </br>
-<textarea id="bio" name="bio" rows="5" cols="100"> </textarea> </br> 
-<label id="boards">Boards</label> </br> 
+ <label id="name">Full Name</label> </br>  <!--echo user full name here --> 
+<textarea readonly id="bio" name="bio" rows="5" cols="100" > </textarea> </br> <!-- echo user infomation here -->
+ 
  </div>
 <div id="buttonArea">
-<a href="editProfile.php?userId=<?php echo ($userId)?>"><button class="button">Edit Profile</button></a></br> 
+<a href="editProfile.php?userId=<?php echo ($userId)?>"><button class="button" id="profile">Edit Profile</button></a></br> 
 </div>
 
 
-
+<div class="parentArticle">
 <?php
 
 //Load all saved Destinations for  user
@@ -77,10 +78,13 @@ $stmtLoadDestinations->execute();
         //cycles through
         ?>
         <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
-        <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class='button'>Mark</button>
+        <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class="button" id='mark'>Mark</button>
+        <div class="content"> 
         <p id="name"><?php echo($result["destinationName"]);?></p> </br>
         <p><?php echo($result["city"]); ?> </p> </br>
         <p><?php echo($result["country"]);?></p> </br>
+        <button type="submit" class="button" id="discover"><a href="destination.php?destinationId=<?php echo($result["destinationId"]);?>">Discover</a></button>
+        </div>
         </div>
 
 
@@ -91,7 +95,7 @@ $stmtLoadDestinations->execute();
 }
 
 ?>
-
+</div>
 </body>
 
 </html>
