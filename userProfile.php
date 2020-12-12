@@ -35,10 +35,10 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 
 }
 
-print_r($userSavedDestinations);
+//print_r($userSavedDestinations);
 
-$destinationJSON = json_encode($userSavedDestinations);
-echo ($destinationJSON);
+// $destinationJSON = json_encode($userSavedDestinations);
+// echo ($destinationJSON);
 
 ?>
 
@@ -91,6 +91,11 @@ $stmtLoadDestinations->execute();
 }
 
 ?>
+
+<script >
+    var userId= <?php echo($userId) ?>;
+</script>
+<script src="markd.js"></script>
 
 </body>
 
