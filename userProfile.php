@@ -56,11 +56,9 @@ echo ($destinationJSON);
 <label id=boards>Boards</label> </br>
  </div>
 <div id="buttonArea">
-<a href="edit-boards.html"><button class="button">Edit Profile</button></a></br>
+<a href="editProfile.php"><button class="button">Edit Profile</button></a></br>
 </div>
-<body>
 
-<a href="add-board.html" ><button class="addButton"> Add A Board </button></a>
 
 
 <?php
