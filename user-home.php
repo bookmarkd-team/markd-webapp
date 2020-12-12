@@ -101,7 +101,7 @@ $arrayOfDestinationsJSON = json_encode($arrayOfDestinations);
     var userId= <?php echo($userId) ?>;
     //console.log(userId);
 
-    //console.log( <?php echo($arrayOfDestinationsJSON) ?>)
+    //console.log( <?php //echo($arrayOfDestinationsJSON) ?>)
 </script>
 
 <script src="markd.js"></script>
