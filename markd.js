@@ -1,6 +1,8 @@
 
+var userId= 1;
+
 // create code to access any marked button with a data-destination attribute 
-var markdButtons = document.querySelectorAll('.button[data-destination]');
+var markdButtons = document.querySelectorAll('#mark[data-destination]');
 
 console.log(markdButtons);
 
@@ -29,7 +31,7 @@ function markd(e){
     let selectedDestination = e.srcElement.dataset.destination
 
     //call check if saved function
-    checkIfSave(selectDestination, userId);
+    checkIfSave(selectedDestination, userId);
     
 }
 
@@ -64,9 +66,18 @@ function checkIfSave(destination, user){
         if(xhr.readyState === 4){        
             console.log(xhr.responseText);// modify or populate html elements based on response.
                 //DOM Manipulation
+                console.log(this);
+
+                console.log(this.responseText);
+
         } 
     }
 
+    //Make call to to php script to do the insert
+    var getString = "userId=" + userId + "&destinationId=" + destination ; 
+    xhr.open("GET","checkIfSaved.php?"+ getString,true); 
+    xhr.send();
+    console.log(getString);
    
    
     return destinationSaved
@@ -89,7 +100,7 @@ function save(destination){
     }
 
     //Make call to to php script to do the insert
-    xhr.open("GET","saveDestinationProcessing.php",true); 
+    xhr.open("POST","saveDestinationProcessing.php",true); 
     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     var postString = "userId=" + userId + "&destinationId=" + selectDestination[i] ; 
     
