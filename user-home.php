@@ -26,15 +26,13 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
     
 }
 
-// print_r($userTags);
-
-$tagsJSON = json_encode($userTags);
-// echo ($tagsJSON);
+//print in console the usertags to check it
+print_r($userTags);
 
 ?>
 
 <?php
-include "navheader.html";
+include("navheader.html");
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,6 +59,10 @@ include "navheader.html";
 <div class="parentArticle">
 <?php
 
+//create an array to store all the loaded destinations to be used in Javascript possibly
+$arrayOfDestinations = array();
+
+
 //Load all Destinations for the Tags
 for ($i = 0; $i < count($userTags); $i++){
 
@@ -84,15 +86,26 @@ while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
     
 
 
-        <?php
+    <?php
+
+    //add loaded locations to the array
+    array_push($arrayOfDestinations, array($userId, $result["destinationId"]));
     }
 }
+
+//capture all the destinations and put it in a json File to be used in the checking if all the destinations are marked. And dimming the MARKED button or removing them 
+$arrayOfDestinationsJSON = json_encode($arrayOfDestinations);
+print_r($arrayOfDestinations);
+
+echo ($arrayOfDestinationsJSON);
 
 ?>
 
 <!-- Linking JavaScript. Saving User id as javascript variable too  -->
 <script src="markd.js">
-    var userId= <?php echo $userId ?>;
+    var userId= <?php echo($userId) ?>;
+
+    console.log( <?php echo($arrayOfDestinationsJSON) ?>)
 </script>
 
 

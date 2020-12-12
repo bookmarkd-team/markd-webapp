@@ -4,11 +4,11 @@ var userId= 1;
 // create code to access any marked button with a data-destination attribute 
 var markdButtons = document.querySelectorAll('#mark[data-destination]');
 
-console.log(markdButtons);
+// console.log(markdButtons);
 
-console.log(markdButtons[0].dataset.destination);
+// console.log(markdButtons[0].dataset.destination);
 
-console.log(userId);
+// console.log(userId);
 
 // add an event listener to every button on the page
 for (i=0; i < markdButtons.length; i++){
@@ -26,12 +26,16 @@ function markd(e){
     //console when mouse down
     console.log("clicked");
     //console the destination id for the sected destination
-    console.log(e.srcElement.dataset.destination);
+    //console.log(e.srcElement.dataset.destination);
 
+    //Collect the destination of the marked item that was clicked
     let selectedDestination = e.srcElement.dataset.destination
 
-    //call check if saved function
-    checkIfSave(selectedDestination, userId);
+    //Call the Save function. It checks if saved first before it saves.
+    checkIfSave(selectedDestination);
+
+    //call check if saved function is working
+    //console.log(checkIfSave(selectedDestination));
     
 }
 
@@ -41,14 +45,7 @@ function markd(e){
 
 // call function to add selected destination to save DB 
     //{
-        //if( destination is not saved already ){
-         // save it with saveDestinationProccessing.php 
-        //} else {
         
-        // remove it from Save Data base
-
-
-        //}
         
         
 
@@ -56,19 +53,32 @@ function markd(e){
     //}
 
   
-function checkIfSave(destination, user){
-    var destinationSaved = false;
+function checkIfSave(destination){
+    let destinationSaved;
     
     //Open up a asynchronous AJAX Connection
     var xhr = new XMLHttpRequest(); 
     xhr.onreadystatechange = function(e){     
-        console.log(xhr.readyState);     
+        //console.log(xhr.readyState);     
         if(xhr.readyState === 4){        
-            console.log(xhr.responseText);// modify or populate html elements based on response.
-                //DOM Manipulation
-                console.log(this);
+            //console.log(xhr.responseText);// modify or populate html elements based on response.
+            
+            
 
-                console.log(this.responseText);
+            let response = parseInt(this.responseText);
+            console.log(response);
+            
+            if(response > 0) {
+                destinationSaved = true;
+                console.log(destinationSaved);
+            } else {
+                destinationSaved = false;
+            }
+
+             //destinatonSaved returns if true of false if the user has saved the destination all ready. 
+            //Call save function right after:
+            save(destination, destinationSaved);
+                
 
         } 
     }
@@ -78,35 +88,61 @@ function checkIfSave(destination, user){
     xhr.open("GET","checkIfSaved.php?"+ getString,true); 
     xhr.send();
     console.log(getString);
-   
-   
-    return destinationSaved
+
+
 
 }
 
 
-function save(destination){
+function save(destination, hasBeenSaved){
+
+    //testing if variables sent to function has been recived
+    console.log("save function called, with variables: "+ destination + ". And hasBeenSaved=" + hasBeenSaved);
 
 
-
-    //Open up a asynchronous AJAX Connection
+     //Open up a asynchronous AJAX Connection
     var xhr = new XMLHttpRequest(); 
     xhr.onreadystatechange = function(e){     
-        console.log(xhr.readyState);     
-        if(xhr.readyState === 4){        
-            console.log(xhr.responseText);// modify or populate html elements based on response.
-                //DOM Manipulation
+        //console.log(xhr.readyState);     
+        if(xhr.readyState === 4){ 
+            
+            if(hasBeenSaved == true){
+
+                //Manipulate the DOM to say the destination has been saved. You can change CSS or HTML with java script here
+
+            } else if (hasBeenSaved == false) {
+
+                //Manipulate the DOM to say the destination has not saved. You can change CSS or HTML with java script here
+
+            }
+        
+
         } 
     }
 
-    //Make call to to php script to do the insert
-    xhr.open("POST","saveDestinationProcessing.php",true); 
-    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    var postString = "userId=" + userId + "&destinationId=" + selectDestination[i] ; 
-    
-    console.log(postString);
 
-    xhr.send(postString);
+    if(hasBeenSaved == true){
+        
+        //if saved already do not save again
+        console.log("We should not Save again");
+    
+        
+    } else if (hasBeenSaved == false) {
+        
+        //if not saved already please save it
+        console.log(" We should Save");
+
+        //Make call to to php script to do the insert
+        xhr.open("POST","saveDestinationProcessing.php",true); 
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        var postString = "userId=" + userId + "&destinationId=" + destination ; 
+
+        console.log("Post the following data to saveDestinationProcessing.php: " + postString);
+        xhr.send(postString);
+
+    }
+
+
 
 
 }
