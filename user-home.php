@@ -27,7 +27,7 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 }
 
 //print in console the usertags to check it
-print_r($userTags);
+//print_r($userTags);
 
 ?>
 
@@ -91,18 +91,20 @@ while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
 
 //capture all the destinations and put it in a json File to be used in the checking if all the destinations are marked. And dimming the MARKED button or removing them 
 $arrayOfDestinationsJSON = json_encode($arrayOfDestinations);
-print_r($arrayOfDestinations);
-
-echo ($arrayOfDestinationsJSON);
+//print_r($arrayOfDestinations);
+//echo ($arrayOfDestinationsJSON);
 
 ?>
 
 <!-- Linking JavaScript. Saving User id as javascript variable too  -->
-<script src="markd.js">
+<script >
     var userId= <?php echo($userId) ?>;
+    //console.log(userId);
 
-    console.log( <?php echo($arrayOfDestinationsJSON) ?>)
+    //console.log( <?php echo($arrayOfDestinationsJSON) ?>)
 </script>
+
+<script src="markd.js"></script>
 
 
 </body>

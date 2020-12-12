@@ -1,5 +1,6 @@
 
-var userId= 1;
+//var userId= 1; //Getting userID from the userhome php file
+//console.log(userId);
 
 // create code to access any marked button with a data-destination attribute 
 var markdButtons = document.querySelectorAll('#mark[data-destination]');
@@ -8,7 +9,7 @@ var markdButtons = document.querySelectorAll('#mark[data-destination]');
 
 // console.log(markdButtons[0].dataset.destination);
 
-// console.log(userId);
+
 
 // add an event listener to every button on the page
 for (i=0; i < markdButtons.length; i++){
