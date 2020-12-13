@@ -4,26 +4,17 @@
     <?php
         include "meta.html";
     ?>
-
     <link rel="stylesheet" href="css/landing-page.css">
-    
+
 </head>
 </html>
 <!DOCTYPE html>
 <html>
 <body>
+<?php
+    include "public-navheader.html";
+?>
 
-<div class = "homenav">
-<nav>
-  <ul>
-      <a href="landing.php">
-      <img src="imgs/markd.png" id="logo"/>
-      </a>
-      <li><a href="register-page.php">Register</a></li>
-      <li><a href="sign-in.php">Login</a></li>
-  </ul>
-</nav>
-</div>
 <div class = "homecover">
     <h1 id="hometitle">Discover Your Endless Experience </h1>
     <li id="discover"><a href="register-page.php">Start Discovering</a></li>
