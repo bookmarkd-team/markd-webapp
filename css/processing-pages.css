@@ -3,27 +3,22 @@
     src: url("/Muli.ttf") format("ttf");
     src: url("/muli/Muli-Bold.ttf") format("ttf");
   }
-  
 
-  html, body{
-   
+html, body{
     margin: 0px;
     padding: 0px;
-   
-  }
-   
+}
 
-  
-  body{
-    background-color:black; 
-  
+body{
+    background-color:black;
     color: #FFF9DF;
     background-color:grey;
-  }
-  
+    background-image: url("../imgs/vienna.jpg");
+    background-size: cover;
+    font-family: Muli;
+}
 
- 
-  .login-form{
+.process-form{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -36,29 +31,24 @@
     height:auto;
     width:auto;
     padding-right:20px;
-    padding-left:20px; 
-    padding-bottom:20px; 
-    padding-top:20px; 
+    padding-left:20px;
+    padding-bottom:20px;
+    padding-top:20px;
     border-radius:7px;
-  }
- 
+}
 
-  
-  
- 
-  .link{
+.link{
     color:#FFF9DF;
     font: 16px Muli, sans-serif;
-  }
+}
 
-  
-  a{
-  text-decoration:none;
-  font-size:25px;
-  font-family:Muli;
-  color:#FF7777;  }
-  
-  a:hover{
-  color:#FFF9DF;
-  
-  }
+a{
+    text-decoration:none;
+    font-size:25px;
+    font-family:Muli;
+    color:#FF7777;
+}
+
+a:hover{
+    color:#FFF9DF;
+}

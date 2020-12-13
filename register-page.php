@@ -28,11 +28,11 @@
     <div>
     <input type="text" name="firstName" id="firstName" placeholder="First name" required/>
 
-    <input type="text" name="lastName" id="lastName" placeholder="Last name " required/>
+    <input type="text" name="lastName" id="lastName" placeholder="Last Name"required/>
 
     <input type="email" name="emailAddress" id="emailAddress" placeholder="Email Address" required/>
 
-    <input type="password" name="password" placeholder="New password" required/> </br>
+    <input type="password" name="password" placeholder="New Password" required/> </br>
     </div>
 
 

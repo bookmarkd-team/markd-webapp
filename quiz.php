@@ -13,10 +13,9 @@ include('quizLoad.php');
 
 <head>
     <?php
-        include "navheader.html";
         include "meta.html";
     ?>
-    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/quiz-page.css">
     <link rel="stylesheet" href="css/user-home.css">
 </head>
 

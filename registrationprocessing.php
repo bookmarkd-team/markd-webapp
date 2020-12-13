@@ -2,6 +2,7 @@
 //process-signup.php
 
 //receive input
+include "navheader.html";
 $firstName = $_POST["firstName"];
 $lastName = $_POST["lastName"];
 $emailAddress = $_POST["emailAddress"];
@@ -16,5 +17,17 @@ $stmt = $pdo->prepare("INSERT INTO `user`
 
 $stmt->execute();
 ?>
-<p>Thank you for signing up!</p>
-<a href="sign-in.php">Go to Login</a>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/processing-pages.css">
+</head>
+<body>
+
+	<div class="process-form">
+		<p>Thank you for signing up!</p>
+		<a href="sign-in.php">Go to Login</a>
+	</div>
+
+</body>
+</html>

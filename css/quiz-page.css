@@ -54,6 +54,7 @@ body{
     color: white;
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     height: 50vh;
     width: 50vw;
