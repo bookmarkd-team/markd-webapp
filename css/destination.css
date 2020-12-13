@@ -1,3 +1,16 @@
+@font-face {
+    font-family: Muli;
+    src: url("muli/Muli.ttf") format("ttf");
+  
+}
+
+html, body{
+    font-family:Muli; 
+    margin: 0px;
+    padding: 0px;
+    font-size:25px; 
+}
+
 .banner{
     position:fixed; 
     

@@ -3,6 +3,7 @@
 //start session
 session_start();
 //Quiz Page. Loads The Quiz In a page
+include "navheader.html";
 include('quizLoad.php');
 
 
