@@ -14,6 +14,8 @@ body{
   font: 25px Muli, sans-serif;
   color: #FFF9DF;
   background-color:grey;
+  background-image: url("../imgs/ella.jpg");
+  background-size: cover;
 }
 
 div{
