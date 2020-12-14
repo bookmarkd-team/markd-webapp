@@ -1,5 +1,5 @@
 <?php
-
+include "meta.html";
 //start session
 session_start();
 include('navheader.html');
@@ -33,13 +33,6 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mark'd - Discover Your Endless Experiences</title>
-    <meta charset="utf-8">
-    <meta name="description" content="travel experiences generator">
-    <meta name="keywords" content="travel, marking, planning, experiences, discovery">
-    <link rel="author" content="Mark'd Team" href="https://sheridancollege.ca" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='icon' type="image/png" sizes="32x32" href='../icon/favicon.png'>
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/user-home.css">
 
@@ -88,7 +81,7 @@ while($result= $stmtLoadDestinations->fetch(PDO::FETCH_ASSOC)){
     }
 }
 
-//capture all the destinations and put it in a json File to be used in the checking if all the destinations are marked. And dimming the MARKED button or removing them 
+//capture all the destinations and put it in a json File to be used in the checking if all the destinations are marked. And dimming the MARKED button or removing them
 $arrayOfDestinationsJSON = json_encode($arrayOfDestinations);
 //print_r($arrayOfDestinations);
 //echo ($arrayOfDestinationsJSON);
