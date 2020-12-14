@@ -78,6 +78,14 @@ p{display:flex;
     background-color:#FF7777;
     font: 25px Muli, sans-serif;
     color:#FFF9DF;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+#mark:hover{
+    transform: scale(1.1);
+    background-color: #1B1948;
+    border-color: #1B1948;
 }
 
 #discover{
@@ -89,7 +97,15 @@ p{display:flex;
     background-color:#FF7777;
     font: 25px Muli, sans-serif;
     color:#FFF9DF;
+    transition: all 300ms;
 }
+
+#discover:hover{
+    transform: scale(1.1);
+    background-color: #1B1948;
+    border-color: #1B1948;
+}
+
 
 a{
 color:white;

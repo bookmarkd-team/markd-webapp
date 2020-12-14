@@ -34,7 +34,7 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 <html>
 <head>
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/user-home.css">
+    <link rel="stylesheet" href="css/user-home-page.css">
 
 </head>
 
