@@ -1,96 +1,84 @@
-@font-face {
+@font-face{
     font-family: "Muli";
     src: url("/muli/Muli.ttf") format("ttf");
     src: url("/muli/Muli-Bold.ttf") format("ttf");
 }
 
-
-
 html, body{
-  font-family:Muli; 
+  font-family:Muli;
   margin: 0px;
   padding: 0px;
-  font-size:25px; 
+  font-size:25px;
 }
- 
 
 #all{
-     display:flex;  
-    
-    justify-content:center; 
+    display:flex;
+    justify-content:center;
     position:relative;
     min-height:100%;
     height:100%;
- 
- 
 }
-#profile{
-    display:flex; 
-    flex-direction:column; 
-    width:100%;
 
-    align-items:center; 
+#profile{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    align-items:center;
     justify-content: center;
     background-color:#FF7777;
-    
-
 }
+
 #form{
-     display:flex; 
+    display:flex;
     width:50%;
-    
     justify-content: center;
-   
     flex-direction:column;
     padding-left:20%;
-    
-  
 }
+
 #title{
     margin-bottom: 20px;
-    font: bold 40px Muli, sans-serif; 
+    font: bold 40px Muli, sans-serif;
     display:inline-block
 }
 
-
-input[type=text], select {
+input[type=text], select{
     width: 250px;
     height:30px;
     border: none;
     border-bottom:2px solid #1B1948;
     margin-bottom:20px;
-  }
+}
 
 label{
-
-  margin-bottom:20px; 
+  margin-bottom:20px;
 }
-input[type=password], select {
+
+input[type=password], select{
     width: 250px;
     height:30px;
     border: none;
     border-bottom: 2px solid#1B1948;
     margin-bottom:10px;
-  }
-  input[type=text]:focus {
-    background-color: #1B1948;
-    color:#FFF9DF; 
-    font-size:25px; 
-   
-  }
-  input[type=password]:focus {
-    background-color: #1B1948;
-    color:#FFF9DF; 
-    font-size:25px; 
-    
-  }
-  input::-webkit-input-placeholder  { 
-    
-    font: 25px Muli, sans-serif;  
-    color: #1B1948; 
-    opacity: 1;
+}
 
-  }
+input[type=text]:focus{
+    background-color: #1B1948;
+    color:#FFF9DF;
+    font-size:25px;
+}
+
+input[type=password]:focus{
+    background-color: #1B1948;
+    color:#FFF9DF;
+    font-size:25px;
+}
+
+input::-webkit-input-placeholder{
+    font: 25px Muli, sans-serif;
+    color: #1B1948;
+    opacity: 1;
+}
 
 .button{
     width: 300px;
@@ -98,24 +86,23 @@ input[type=password], select {
     border-radius:7px;
     border-color:#FF7777;
     border-style: solid;
-    background-color:#FF7777; 
+    background-color:#FF7777;
     font: 25px Muli, sans-serif;
     color:#FFF9DF;
-    
     margin-bottom:15px;
     margin-top:5px;
 }
+
 .button{
     opacity: 0.85;
     transition: 0.3s;
-    cursor: pointer;   
-
-}
-.button:hover {opacity: 1}
-
-
-
-input:focus {
-    outline:none; 
+    cursor: pointer;
 }
 
+.button:hover{
+    opacity: 1;
+}
+
+input:focus{
+    outline:none;
+}

@@ -1,4 +1,4 @@
-@font-face {
+@font-face{
     font-family: "Muli";
     src: url("/muli/Muli.ttf") format("ttf");
     src: url("/muli/Muli-Bold.ttf") format("ttf");
@@ -106,10 +106,9 @@ p{display:flex;
     border-color: #1B1948;
 }
 
-
 a{
-color:white;
-text-decoration:none;
+    color:white;
+    text-decoration:none;
 }
 
 .button{

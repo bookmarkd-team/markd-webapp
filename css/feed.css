@@ -1,4 +1,4 @@
-@font-face {
+@font-face{
     font-family: "Muli";
     src: url("/muli/Muli.ttf") format("ttf");
     src: url("/muli/Muli-Bold.ttf") format("ttf");
@@ -23,26 +23,22 @@ body{
 }
 
 #parentArticle{
-position:relative;
-bottom:95px;
-display:flex;
-justify-content:space-around;
-flex-wrap:wrap;
-flex-direction:row;
-
+    position:relative;
+    bottom:95px;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    flex-direction:row;
 }
+
 .eachArticle{
-
-background-color: #1B1948;
-width:500px;
-height:500px;
-margin-top: 10px;
-margin-right: 10px;
-margin-bottom: 10px;
-margin-left: 10px;
-
-
-
+    background-color: #1B1948;
+    width:500px;
+    height:500px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .button{
@@ -59,16 +55,17 @@ margin-left: 10px;
     color:#FFF9DF;
 
 }
+
 .button{
     opacity: 0.85;
     transition: 0.3s;
     cursor: pointer;
-
 }
-.button:hover {opacity: 1}
 
+.button:hover{
+    opacity: 1;
+}
 
-
- input:focus {
+input:focus {
     outline:none;
 }

@@ -1,8 +1,8 @@
-@font-face {
+@font-face{
     font-family: Muli;
     src: url("/Muli.ttf") format("ttf");
     src: url("/muli/Muli-Bold.ttf") format("ttf");
-  }
+}
 
 html, body{
     margin: 0px;

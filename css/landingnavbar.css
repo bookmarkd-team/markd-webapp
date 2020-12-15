@@ -1,16 +1,12 @@
-@font-face {
+@font-face{
   font-family: Muli;
   src: url(../font/Muli.ttf);
 }
 
-
 html, body{
-    
     margin: 0px;
     padding: 0px;
-  
 }
-
 
 nav{
     padding-top: 20px;
@@ -25,11 +21,11 @@ ul{
     overflow: hidden;
 }
 
-li {
+li{
     float: left;
 }
 
-li a {
+li a{
     display: block;
     color: white;
     padding: 16px;
