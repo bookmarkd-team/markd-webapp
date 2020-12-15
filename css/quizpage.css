@@ -13,6 +13,10 @@ body{
     font-family: Muli, sans-serif;
 }
 
+.topnav a{
+    font: 25px Muli, sans-serif;
+}
+
 .cover{
     display: flex;
     flex-direction: column;
