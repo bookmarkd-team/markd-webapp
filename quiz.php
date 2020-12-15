@@ -19,12 +19,12 @@ include('quizLoad.php');
 
 
 <body>
-<div class="cover">
-<div class="cover-text">
-<h1 id="head">Quiz 1</h1>
-<p id="text">Find Your Travel Personality</p>
-</div>
-</div>
+    <div class="cover">
+        <div class="cover-text">
+            <h1 id="head">Quiz 1</h1>
+            <p id="text">Find Your Travel Personality</p>
+        </div>
+    </div>
 
 
 <form id="quiz">

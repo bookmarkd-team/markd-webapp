@@ -1,14 +1,10 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
     <?php
         include "meta.html";
     ?>
-
     <link rel="stylesheet" href="css/sign-in.css">
-
 </head>
 <body>
 
@@ -16,11 +12,9 @@
     include "public-navheader.html";
 ?>
 
-<section class="firstform">
-
-
-
+    <section class="firstform">
     <form action="registrationprocessing.php" method="POST" form id= "sign-in-form">
+
     <div>
     <p id="title">Sign Up</br></p>
     </div>
@@ -34,7 +28,6 @@
 
     <input type="password" name="password" placeholder="New Password" required/> </br>
     </div>
-
 
     <div>
     <div id=formbutton>

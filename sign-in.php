@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,12 +11,10 @@
 <?php
     include "public-navheader.html";
 ?>
-
-
     <section class="firstform">
     <form action="loginprocessing.php" method="POST" id="sign-in-form">
-    <div> <p id="title"> Log In </p> </div>
 
+    <div> <p id="title"> Log In </p> </div>
 
     <div>
     <input type="email" name="emailAddress" placeholder="Enter Your Email Address" required/> </br>
@@ -28,7 +25,6 @@
     <button type="submit" value="Log In"  class="button">Login</button> </br>
     <a href="register-page.php" class="link">Don't have an account? Sign up</a>
     </div>
-
 
 </section>
 </form>

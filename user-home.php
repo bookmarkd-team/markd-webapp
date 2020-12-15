@@ -42,7 +42,7 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 
 
 <div>
-<h1 id="title">Your Travel Feed based on your quiz...</h1>
+    <h1 id="title">Your Travel Feed based on your quiz...</h1>
 </div>
 <div class="parentArticle">
 <?php

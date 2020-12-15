@@ -18,6 +18,7 @@ session_destroy();
     <section class="firstform">
     <p>Logout Successful!</p>
     <a href="landing.php">Go back to Home </a>
+    
 </section>
 </body>
 </html>
