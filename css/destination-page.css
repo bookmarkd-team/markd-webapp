@@ -19,7 +19,7 @@ html, body{
     margin-left:30px;
     margin-right:30px;
     padding-bottom:30px;
-    background-color:rgba(100,100,100,0.5);
+    background-color:rgba(100,100,100,0.7);
     padding-left:30px;
     flex-direction: column;
 }
