@@ -11,17 +11,14 @@
     color:#ff7777;
 }
 
-
-
 .create{
     position: relative;
     justify-content: flex-start;
     align-self: flex-end;
     background-color: #1B1948;
-    width:850px;   
+    width:850px;
     bottom:150px;
 }
-
 
 .image{
     display:flex;
@@ -31,7 +28,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 #text1{
     padding-left: 25px;

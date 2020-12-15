@@ -1,29 +1,21 @@
-<?php 
+<?php
 session_start();
-//start session 
+//start session
+include "meta.html";
 include('navheader.html');
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mark'd - Discover Your Endless Experiences</title>
-    <meta charset="utf-8">
-    <meta name="description" content="travel experiences generator">
-    <meta name="keywords" content="travel, marking, planning, experiences, discovery">
-    <link rel="author" content="Mark'd Team" href="https://sheridancollege.ca" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='icon' type="image/png" sizes="32x32" href='../icon/favicon.png'>
-    <link rel="stylesheet" href="css/navbar.css">
-   
-    <link rel="stylesheet" href="css/destination.css">
+    <link rel="stylesheet" href="css/destination-page.css">
 </head>
 
 <body>
 <?php //stmt and pdo and dbgonfig
     include("includes/dbconfig.php");
     $destinationId = $_GET["destinationId"];
-    
+
 
     $stmt = $pdo->prepare("SELECT * FROM `destination`
     WHERE `destinationId` = '$destinationId'");
@@ -35,9 +27,9 @@ include('navheader.html');
 
     <div class="title" style="background-image: url(imgs/<?php echo ($row["imageLink"]);?>);  background-size: cover; background-position:center; background-repeat: no-repeat; ">
     <!-- echo content here for php  -->
-   
+
     <div class="banner">
-    
+
         <h1><?php echo($row["destinationName"]);?></h1>
             <h2><?php echo ($row["city"]);?></h2>
             <h2><?php echo ($row["country"]);?></h2>
@@ -48,8 +40,8 @@ include('navheader.html');
     </div>
 
     <!-- markd button -->
-    
-    
+
+
     <!-- not sure if we need the data-* attribute ^here^... we can get rid of that part if necessary -->
 
 <!-- </div> -->

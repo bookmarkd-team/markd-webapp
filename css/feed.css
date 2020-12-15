@@ -5,40 +5,37 @@
 }
 
 body{
- 
-    font: 25px Muli, sans-serif;  
-    color:#1B1948; 
-    background-color:grey; 
-   
-} 
+    font: 25px Muli, sans-serif;
+    color:#1B1948;
+    background-color:grey;
+}
 
 #title{
-    position:relative; 
-    bottom:50px; 
-    font-size:75px; 
+    position:relative;
+    bottom:50px;
+    font-size:75px;
     background-color:#FF7777;
-    width:100%; 
-    height:500px; 
+    width:100%;
+    height:500px;
     padding-left:20px;
     display:flex;
-    align-items:center; 
-    
-
+    align-items:center;
 }
+
 #parentArticle{
-position:relative; 
-bottom:95px; 
+position:relative;
+bottom:95px;
 display:flex;
-justify-content:space-around; 
-flex-wrap:wrap; 
-flex-direction:row; 
+justify-content:space-around;
+flex-wrap:wrap;
+flex-direction:row;
 
 }
 .eachArticle{
 
 background-color: #1B1948;
 width:500px;
-height:500px; 
+height:500px;
 margin-top: 10px;
 margin-right: 10px;
 margin-bottom: 10px;
@@ -49,23 +46,23 @@ margin-left: 10px;
 }
 
 .button{
-    margin-top:10px; 
-    margin-right:10px; 
-    float:right; 
+    margin-top:10px;
+    margin-right:10px;
+    float:right;
     width: 100px;
     height:50px;
     border-radius:7px;
     border-color:#FF7777;
     border-style: solid;
-    background-color:#FF7777; 
+    background-color:#FF7777;
     font: 25px Muli, sans-serif;
     color:#FFF9DF;
-    
+
 }
 .button{
     opacity: 0.85;
     transition: 0.3s;
-    cursor: pointer;   
+    cursor: pointer;
 
 }
 .button:hover {opacity: 1}
@@ -73,5 +70,5 @@ margin-left: 10px;
 
 
  input:focus {
-    outline:none; 
-} 
+    outline:none;
+}
