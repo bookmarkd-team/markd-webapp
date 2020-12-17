@@ -18,11 +18,8 @@ include ("navheader.html");
 
 
 //receive inputs
-$userId = 2; //$_SESSION["userId"]; //what user is updating deatils?
-$firstName = "test";//$_GET["firstName"];
-$lastName = "tester";//$_GET["lastName"];
-$emailAddress = "tester@email.com";//$_GET["emailAddress"];
-$password = "4352";//$_GET["password"];
+$userId =$_SESSION["userId"]; //what user is updating deatils?
+
 
 //connect to db
 include('includes/dbconfig.php');
@@ -31,6 +28,7 @@ $stmt = $pdo->prepare("SELECT * FROM `user`
 WHERE `user` . `userId` = $userId");
 
 $stmt->execute();
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <div id="all">
@@ -45,10 +43,10 @@ $stmt->execute();
 <p id="thanks" style="display:none;">Profile Updated!</p>
 <form id="editProfile">
 <label id="title"> Your Profile </label></br>
-<label>First Name:</label><input type="text" id="firstName" placeholder="<?php echo($firstName);?>"></br>
-<label>Last Name:</label><input type="text" id="lastName" placeholder="<?php echo($lastName);?>"></br>
-<label>Email Address:</label><input type="text" id="emailAddress" placeholder="<?php echo($emailAddress);?>"></br>
-<label>Password:</label><input type="password" id="password" placeholder="<?php echo($password);?>"></br>
+<label>First Name:</label><input type="text" id="firstName" placeholder="<?php echo($row["firstName"]);?>"></br>
+<label>Last Name:</label><input type="text" id="lastName" placeholder="<?php echo($row["lastName"]);?>"></br>
+<label>Email Address:</label><input type="text" id="emailAddress" placeholder="<?php echo($row["emailAddress"]);?>"></br>
+<label>Password:</label><input type="password" id="password" placeholder="<?php echo($row["password"]);?>"></br>
 <button type="submit" value="update" id="update-data" class="button">Update Account Info</button></br>
 
 

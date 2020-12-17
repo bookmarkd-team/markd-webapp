@@ -3,7 +3,7 @@
 session_start();
 
 //receive inputs
-$userId = 1; //$_SESSION["userId"];
+$userId = $_SESSION["userId"];
 $questionId= $_POST["questionId"];
 $answer= $_POST["answer"];
 

@@ -15,7 +15,7 @@ session_start();
 
 
 //receive inputs
-$userId = 1; //$_SESSION["userId"]; //what user's answers do we need
+$userId = $_SESSION["userId"]; //what user's answers do we need
 
 //connect to db
 include('includes/dbconfig.php');
