@@ -58,7 +58,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 <link rel="stylesheet" href="css/user-profile.css">
 
 <div id="profileArea">
-<?php echo ("Welcome to your Mark'd Destinations, ".$row["firstName"]); ?>
+<?php echo ("Welcome to your Mark'd Destinations, ".$row["firstName"]." ".$row["lastName"])."!"; ?>
  </div>
  
 <div id="buttonArea">
