@@ -49,7 +49,7 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 <head>
 <title></title>
 </head>
-<link rel="stylesheet" href="css/user-profile.css">
+<link rel="stylesheet" href="css/userprofile.css">
 
 <div id="bio">
 <img src="pig.jpg" height=200 width=200 alt="profile-picture"/> </br>
@@ -79,10 +79,10 @@ $stmtLoadDestinations->execute();
         //cycles through
         ?>
         <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
-        <div id=buttonContainer> 
+        <div id=buttonContainer>
         <button data-destination='<?php echo($result["destinationId"]);?>' type= "submit" class="button" id='delete'>Delete</button>
         <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class="button" id='mark'>Mark</button>
-        
+
         </div>
         <div class="content">
         <p id="name"><?php echo($result["destinationName"]);?></p> </br>

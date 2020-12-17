@@ -13,7 +13,7 @@ include('quizLoad.php');
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/quiz-page.css">
+    <link rel="stylesheet" href="css/quizpage.css">
     <link rel="stylesheet" href="css/userhome.css">
 </head>
 

@@ -8,7 +8,7 @@ include('navheader.html');
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/destination-page.css">
+    <link rel="stylesheet" href="css/destinationpage.css">
 </head>
 
 <body>

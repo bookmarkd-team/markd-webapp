@@ -1,6 +1,6 @@
 @font-face{
     font-family: Muli;
-    src: url("muli/Muli.ttf") format("ttf");
+    src: url(../font/Muli.ttf);
 }
 
 html, body{
@@ -83,16 +83,16 @@ p{
 
 #buttonContainer{
     display:flex;
-    justify-content:space-between; 
-     margin-bottom:20px; 
+    justify-content:space-between;
+     margin-bottom:20px;
 }
 
 #delete{
-    
+
     margin-top:10px;
-   
+
     margin-left:10px;
-    float:right; 
+    float:right;
     width: 100px;
     height:50px;
     border-radius:7px;
