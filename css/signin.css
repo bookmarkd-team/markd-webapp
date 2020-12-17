@@ -1,13 +1,21 @@
-@font-face {
+@font-face{
     font-family: "Muli";
-    src: url("/muli/Muli.ttf") format("ttf");
+    src: url("/muli.ttf") format("ttf");
     src: url("/muli/Muli-Bold.ttf") format("ttf");
 }
 
+body, html{
+    margin: 0px;
+    padding: 0px;
+}
+
 body{
+    /* background-color:black;  */
     font: 25px Muli, sans-serif;
     color: #FFF9DF;
     background-color:grey;
+    background-image: url("../imgs/ella.jpg");
+    background-size: cover;
 }
 
 div{
@@ -17,7 +25,6 @@ div{
 }
 
 #title{
-    padding-bottom:30px;
     font: bold 40px Muli, sans-serif;
 }
 
@@ -40,39 +47,78 @@ div{
     font: bold 25px Muli, sans-serif;
 }
 
+
+input[type=text]{
+    font: 25px Muli, sans-serif;
+    color: #FFF9DF;
+}
+
+input[type=email]{
+    font: 25px Muli, sans-serif;
+    color: #FFF9DF;
+}
+
+input[type=password]{
+    font: 25px Muli, sans-serif;
+    color: #FFF9DF;
+}
+
 input[type=text], select{
-    width: 250px;
+    width: 350px;
     height:30px;
     border: none;
-    border-bottom:2px solid#FFF9DF;
-    background-color: #1B1948
+    border-bottom:2px solid #FFF9DF;
+    background-color: #1B1948;
+    margin-bottom:20px;
 }
 
 input[type=password], select{
-    width: 250px;
+    width: 350px;
     height:30px;
     border: none;
     border-bottom: 2px solid#FFF9DF;
     background-color: #1B1948;
 }
 
-input[type=text]:focus{
-    background-color: #FFF9DF;
+input[type=text]:focus {
+    font: 25px Muli, sans-serif;
+    color: #FFF9DF;
+}
+
+input[type=email]:focus{
+    font: 25px Muli, sans-serif;
+    color: #FFF9DF;
+}
+
+input[type=email], select{
+    font-size:25px;
+    width: 350px;
+    height:30px;
+    border: none;
+    border-bottom:2px solid#FFF9DF;
+    background-color: #1B1948;
+    margin-bottom:20px;
 }
 
 input[type=password]:focus{
-    background-color: #FFF9DF;
+    font: 25px Muli, sans-serif;
+    color: #FFF9DF;
 }
 
 input::-webkit-input-placeholder{
     font: 25px Muli, sans-serif;
     color: #FFF9DF;
-    opacity: 1;
+    opacity: 0.6;
 }
 
 .link{
     color:#FFF9DF;
     font: 16px Muli, sans-serif;
+    transition: all 300ms;
+}
+
+.link:hover{
+    color:#FF7777;
 }
 
 .button{
@@ -87,8 +133,8 @@ input::-webkit-input-placeholder{
 }
 
 .button{
-    opacity: 0.85;
-    transition: 0.3s;
+    opacity: 0.6;
+    transition: all 300ms;
     cursor: pointer;
 }
 
@@ -98,4 +144,15 @@ input::-webkit-input-placeholder{
 
 input:focus {
     outline:none;
+}
+
+a{
+    text-decoration:none;
+    font-size:25px;
+    font-family:Muli;
+    color:#FF7777;
+}
+
+a:hover{
+    color:#FFF9DF;
 }

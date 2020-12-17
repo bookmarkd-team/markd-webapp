@@ -4,7 +4,7 @@
     <?php
         include "meta.html";
     ?>
-    <link rel="stylesheet" href="css/sign-in.css">
+    <link rel="stylesheet" href="css/signin.css">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
 
     <div id=formbutton>
     <button type="submit" value="Log In"  class="button">Login</button> </br>
-    <a href="register-page.php" class="link">Don't have an account? Sign up</a>
+    <a href="register-page.php" class="link">Don't have an Account? Sign Up Here</a>
     </div>
 
 </section>
