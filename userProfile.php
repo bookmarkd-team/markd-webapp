@@ -49,7 +49,7 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 <head>
 <title></title>
 </head>
-<link rel="stylesheet" href="css/userprofile.css">
+<link rel="stylesheet" href="css/user-profile.css">
 
 <div id="bio">
 <img src="pig.jpg" height=200 width=200 alt="profile-picture"/> </br>
