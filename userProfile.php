@@ -101,6 +101,7 @@ $stmtLoadDestinations->execute();
     var userId= <?php echo($userId) ?>;
 </script>
 <script src="markd.js"></script>
+<script scr= "deleteMarkd.js"></script>
 
 </body>
 
