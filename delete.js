@@ -30,7 +30,7 @@ function deleteMarkd(e){
 
     //Collect the destination of the marked item that was clicked
     destinationId = e.target.dataset.destination; 
-    selectedDestination=e.path[1]; //the destination div 
+    selectedDestination=e.path[2]; //the destination div 
     
     
     e.preventDefault();

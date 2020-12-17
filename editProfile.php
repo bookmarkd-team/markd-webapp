@@ -33,8 +33,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 <div id="all">
 <div id="profile">
-<img src="pig.jpg" alt="Profile Picture" width="300" height="300">
-<label id="profile">Hello</label>
+<?php echo ("Hello: ".$row["firstName"]); ?> 
+
 </div>
 
 
