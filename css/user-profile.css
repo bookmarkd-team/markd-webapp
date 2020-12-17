@@ -1,6 +1,6 @@
 @font-face{
     font-family: Muli;
-    src: url("muli/Muli.ttf") format("ttf");
+    src: url(../font/Muli.ttf);
 }
 
 html, body{
@@ -80,55 +80,19 @@ p{
     color:#FFF9DF;
     transition: all 300ms;
 }
-#delete:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    background-color: #1B1948;
-    border-color: #1B1948;
-
-
-}
-
-#mark:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    background-color: #1B1948;
-    border-color: #1B1948;
-
-
-}
-
-#discover:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    background-color: #1B1948;
-    border-color: #1B1948;
-
-
-}
-
-#profile:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-   
-
-}
-
-
-
 
 #buttonContainer{
     display:flex;
-    justify-content:space-between; 
-     margin-bottom:20px; 
+    justify-content:space-between;
+     margin-bottom:20px;
 }
 
 #delete{
-    
+
     margin-top:10px;
-   
+
     margin-left:10px;
-    
+    float:right;
     width: 100px;
     height:50px;
     border-radius:7px;
@@ -174,6 +138,16 @@ a{
 }
 
 
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #1B1948;
+    border-color: #1B1948;
+}
+
+input:focus {
+    outline:none;
+}
 
 
 

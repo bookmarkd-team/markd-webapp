@@ -54,9 +54,8 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 <div id="bio">
 <img src="pig.jpg" height=200 width=200 alt="profile-picture"/> </br>
  <label id="name">Full Name</label> </br>  <!--echo user full name here -->
-<textarea readonly id="bio" name="bio" rows="5" cols="100" > </textarea> </br> <!-- echo user infomation here -->
-
  </div>
+ 
 <div id="buttonArea">
 <a href="editProfile.php?userId=<?php echo ($userId)?>"><button class="button" id="profile">Edit Profile</button></a></br>
 </div>
@@ -79,10 +78,10 @@ $stmtLoadDestinations->execute();
         //cycles through
         ?>
         <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
-        <div id=buttonContainer> 
+        <div id=buttonContainer>
         <button data-destination='<?php echo($result["destinationId"]);?>' type= "submit" class="button" id='delete'>Delete</button>
         <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class="button" id='mark'>Mark</button>
-        
+
         </div>
         <div class="content">
         <p id="name"><?php echo($result["destinationName"]);?></p> </br>

@@ -9,7 +9,7 @@ include ("navheader.html");
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="stylesheet" href="css/profile.css">
+ <link rel="stylesheet" href="css/profile-page.css">
 <title></title>
 </head>
 <body>

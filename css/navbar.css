@@ -1,6 +1,6 @@
 @font-face{
     font-family: Muli;
-    src: url("muli/Muli.ttf") format("ttf");
+    src: url(../font/Muli.ttf);
 }
 
 .topnav{
