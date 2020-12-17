@@ -13,7 +13,7 @@ include('quizLoad.php');
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/quizpage.css">
+    <link rel="stylesheet" href="css/quiz-page.css">
     <link rel="stylesheet" href="css/userhome.css">
 </head>
 
@@ -37,16 +37,11 @@ include('quizLoad.php');
         <div class = "questionRow">
             <!-- use this big div as ever question "row" and style accordingly -->
             <div class = "question">
-                <h1><?php echo ($row["questionString"]); ?> </h1>
+                <h1 id= "indivquestion"><?php echo ($row["questionString"]); ?></h1>
                 <select id=<?php echo ("question". $row["questionId"]); ?> name=<?php echo ($row["questionId"]); ?>>
                     <option value=<?php echo ($row["resultOption1"]); ?>><?php echo ($row["resultOption1"]); ?></option>
                     <option value=<?php echo ($row["resultOption2"]); ?>><?php echo ($row["resultOption2"]); ?></option>
                 </select>
-            </div>
-
-            <div class="recommendations">
-                <!-- use this box to put what ever on the right side of the page -->
-                <h1>Recommendations</h1>
             </div>
         </div>
 <?php
