@@ -1,18 +1,20 @@
 <?php
 session_start();
-if ($_SESSION["userId"]){
+
 //process-delete-person.php
 
 //receive POST data from delete form
-$saveId = $_POST["saveId"];
+$destinationId = $_POST["destinationId"];
+$userId=$_POST["userId"]; 
+
 
 //delete person record (row)
 include('includes/dbconfig.php');
 
-$stmt = $pdo->prepare("DELETE FROM `saved`
-	WHERE `saved`.`saveId` = $saveId;");
+$stmt = $pdo->prepare("DELETE FROM `save`
+	WHERE `destinationId`='$destinationId'AND `userId` = $userId;");
 
 $stmt->execute();
+echo"success"; 
 
-}
 ?>

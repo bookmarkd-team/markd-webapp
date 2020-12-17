@@ -80,7 +80,7 @@ $stmtLoadDestinations->execute();
         ?>
         <div class='eachArticle' style="background-image: url('<?php echo('imgs/'.$result["imageLink"]);?>') ; background-size: cover">
         <button data-destination ='<?php echo($result["destinationId"]);?>' type='submit' class="button" id='mark'>Mark</button>
-        <button data-saveId='<?php echo($result["saveId"]);?>' type= "submit" class='button' id='deleteMarkd'>Delete</button>
+        <button data-destination='<?php echo($result["destinationId"]);?>' type= "submit" class='button' id='delete'>Delete</button>
         <div class="content">
         <p id="name"><?php echo($result["destinationName"]);?></p> </br>
         <p><?php echo($result["city"]); ?> </p> </br>
@@ -102,7 +102,7 @@ $stmtLoadDestinations->execute();
     var userId= <?php echo($userId) ?>;
 </script>
 <script src="markd.js"></script>
-<script scr= "deleteMarkd.js"></script>
+<script src= "delete.js"></script>
 
 </body>
 

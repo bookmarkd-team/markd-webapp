@@ -18,7 +18,7 @@ for (i=0; i < deleteButton.length; i++){
 }
 
 
-
+let selectedDestination; 
 let destinationId; 
 function deleteMarkd(e){
     //function that marks the destination in database.
@@ -29,8 +29,9 @@ function deleteMarkd(e){
     //console.log(e.srcElement.dataset.destination);
 
     //Collect the destination of the marked item that was clicked
-    destinationId = e.target.dataset.destination
-
+    destinationId = e.target.dataset.destination; 
+    selectedDestination=e.path[1]; //the destination div 
+    
     
     e.preventDefault();
 	var xhr = new XMLHttpRequest(); 
@@ -40,17 +41,17 @@ function deleteMarkd(e){
 
 		if(xhr.readyState === 4){    
 			console.log(xhr.responseText);// modify or populate html elements based on response.
-			
+		    selectedDestination.remove(); //remove the selected destination element 
 			
 		} 
 	};
 	
 
-	xhr.open("POST","deleteDestinationProcessing.php",true); 
+	xhr.open("POST","deleteMarkdProcessing.php",true); 
     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    var postString = "userId=" + userId + "&destinationId=" + destination ;  
+    var postString = "userId=" + userId + "&destinationId=" + destinationId ;  
     console.log(postString);    
-    // xhr.send(postString); 
+    xhr.send(postString); 
 
 }
 
