@@ -8,7 +8,7 @@ session_destroy();
     <?php
     include "meta.html";
     ?>
-    <link rel="stylesheet" href="css/sign-in.css">
+    <link rel="stylesheet" href="css/signin.css">
 </head>
 <body>
     <?php
@@ -18,7 +18,7 @@ session_destroy();
     <section class="firstform">
     <p>Logout Successful!</p>
     <a href="landing.php">Go back to Home </a>
-    
+
 </section>
 </body>
 </html>
