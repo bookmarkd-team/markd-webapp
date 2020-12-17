@@ -11,13 +11,17 @@ var markdButtons = document.querySelectorAll('#mark[data-destination]');
 
 
 
+
 // add an event listener to every button on the page
 for (i=0; i < markdButtons.length; i++){
 
     markdButtons[i].addEventListener("click", markd);
+    console.log(markdButtons[i]);
+    let markdButtonToBlue = markdButtons[i].dataset.destination;
+
+    checkIfSave(markdButtonToBlue, markdButtons[i])
 
 }
-
 
 
 
@@ -26,14 +30,15 @@ function markd(e){
     
     //console when mouse down
     console.log("clicked");
-    //console the destination id for the sected destination
-    //console.log(e.srcElement.dataset.destination);
+
+    //capture the selected destination
+    let selectedButton = e.srcElement;
 
     //Collect the destination of the marked item that was clicked
     let selectedDestination = e.srcElement.dataset.destination
 
     //Call the Save function. It checks if saved first before it saves.
-    checkIfSave(selectedDestination);
+    checkIfSave(selectedDestination, selectedButton);
 
     //call check if saved function is working
     //console.log(checkIfSave(selectedDestination));
@@ -54,7 +59,7 @@ function markd(e){
     //}
 
   
-function checkIfSave(destination){
+function checkIfSave(destination,button){
     let destinationSaved;
     
     //Open up a asynchronous AJAX Connection
@@ -72,13 +77,18 @@ function checkIfSave(destination){
             if(response > 0) {
                 destinationSaved = true;
                 console.log(destinationSaved);
+
+                button.style.backgroundColor="#1B1948";
+                button.innerHTML="Mark'd"; 
+
+
             } else {
                 destinationSaved = false;
             }
 
              //destinatonSaved returns if true of false if the user has saved the destination all ready. 
             //Call save function right after:
-            save(destination, destinationSaved);
+            save(destination, destinationSaved, button);
                 
 
         } 
@@ -95,7 +105,7 @@ function checkIfSave(destination){
 }
 
 
-function save(destination, hasBeenSaved){
+function save(destination, hasBeenSaved, button){
 
     //testing if variables sent to function has been recived
     console.log("save function called, with variables: "+ destination + ". And hasBeenSaved=" + hasBeenSaved);
@@ -107,19 +117,22 @@ function save(destination, hasBeenSaved){
         //console.log(xhr.readyState);     
         if(xhr.readyState === 4){ 
             
+            // console.log(markdButtons[i]);
+            //     console.log(markdButtons);
+
             if(hasBeenSaved == true){
                 
                 //Manipulate the DOM to say the destination has been saved. You can change CSS or HTML with java script here
 
-                console.log(markdButtons[i]);
-                console.log(markdButtons);
-
-                e.style.backgroundColor="#1B1948";
-                e.innerHTML="Mark'd"; 
-
             } else if (hasBeenSaved == false) {
 
                 //Manipulate the DOM to say the destination has not saved. You can change CSS or HTML with java script here
+
+                console.log(selectedButton);
+
+
+                button.style.backgroundColor="#1B1948";
+                button.innerHTML="Mark'd"; 
 
             }
         
@@ -146,6 +159,7 @@ function save(destination, hasBeenSaved){
 
         console.log("Post the following data to saveDestinationProcessing.php: " + postString);
         xhr.send(postString);
+
 
     }
 
