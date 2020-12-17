@@ -19,7 +19,7 @@ for (i=0; i < markdButtons.length; i++){
     console.log(markdButtons[i]);
     let markdButtonToBlue = markdButtons[i].dataset.destination;
 
-    checkIfSave(markdButtonToBlue, markdButtons[i])
+    markedTheSaved(markdButtonToBlue, markdButtons[i])
 
 }
 
@@ -47,19 +47,7 @@ function markd(e){
 
 
 
-//some varibale that tracks if destination is currently saved and changes front end accrodingly 
-
-// call function to add selected destination to save DB 
-    //{
-        
-        
-        
-
-
-    //}
-
-  
-function checkIfSave(destination,button){
+function markedTheSaved(destination,button){
     let destinationSaved;
     
     //Open up a asynchronous AJAX Connection
@@ -69,26 +57,25 @@ function checkIfSave(destination,button){
         if(xhr.readyState === 4){        
             //console.log(xhr.responseText);// modify or populate html elements based on response.
             
-            
 
             let response = parseInt(this.responseText);
-            console.log(response);
+            //console.log(response);
             
             if(response > 0) {
                 destinationSaved = true;
                 console.log(destinationSaved);
-
+                //return destinationSaved;
                 button.style.backgroundColor="#1B1948";
                 button.innerHTML="Mark'd"; 
 
 
             } else {
                 destinationSaved = false;
+
+                //return destinationSaved;
             }
 
              //destinatonSaved returns if true of false if the user has saved the destination all ready. 
-            //Call save function right after:
-            save(destination, destinationSaved, button);
                 
 
         } 
@@ -100,6 +87,55 @@ function checkIfSave(destination,button){
     xhr.send();
     console.log(getString);
 
+
+}
+
+  
+function checkIfSave(destination,button){
+    let destinationSaved;
+    
+    
+    //Open up a asynchronous AJAX Connection
+    var xhr = new XMLHttpRequest(); 
+    xhr.onreadystatechange = function(e){     
+        //console.log(xhr.readyState);     
+        if(xhr.readyState === 4){        
+            //console.log(xhr.responseText);// modify or populate html elements based on response.
+            
+            
+
+            let response = parseInt(this.responseText);
+            //console.log(response);
+            
+            if(response > 0) {
+                destinationSaved = true;
+                console.log(destinationSaved);
+                //return destinationSaved;
+                button.style.backgroundColor="#1B1948";
+                button.innerHTML="Mark'd"; 
+
+
+            } else {
+                destinationSaved = false;
+
+                //return destinationSaved;
+            }
+
+             //destinatonSaved returns if true of false if the user has saved the destination all ready. 
+            //Call save function right after:
+            save(destination, destinationSaved, button);
+                
+
+        } 
+
+        console.log(destinationSaved);
+    }
+
+    //Make call to to php script to do the insert
+    var getString = "userId=" + userId + "&destinationId=" + destination ; 
+    xhr.open("GET","checkIfSaved.php?"+ getString,true); 
+    xhr.send();
+    console.log(getString);
 
 
 }
@@ -128,7 +164,7 @@ function save(destination, hasBeenSaved, button){
 
                 //Manipulate the DOM to say the destination has not saved. You can change CSS or HTML with java script here
 
-                console.log(selectedButton);
+                //console.log(selectedButton);
 
 
                 button.style.backgroundColor="#1B1948";
