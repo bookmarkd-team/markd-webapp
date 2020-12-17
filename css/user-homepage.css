@@ -50,12 +50,19 @@ body{
     align-items:center;
     flex-direction:column;
     text-align:center;
-    background-color:rgba(100,100,100,0.5);
+    background-color:rgba(100,100,100,0.6);
     margin-right:10px;
     margin-left:10px;
     margin-top:10px;
     padding-bottom:10px;
+    transition: all 650ms;
+    opacity: 0;
 }
+
+.content:hover{
+    opacity: 1;
+}
+
 
 p{display:flex;
     align-items:center;
