@@ -42,6 +42,12 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 // $destinationJSON = json_encode($userSavedDestinations);
 // echo ($destinationJSON);
 
+$stmt = $pdo->prepare("SELECT * FROM `user`
+WHERE `user` . `userId` = $userId");
+
+$stmt->execute();
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -51,9 +57,8 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 </head>
 <link rel="stylesheet" href="css/user-profile.css">
 
-<div id="bio">
-<img src="pig.jpg" height=200 width=200 alt="profile-picture"/> </br>
- <label id="name">Full Name</label> </br>  <!--echo user full name here -->
+<div id="profileArea">
+<?php echo ("Welcome to your Mark'd Destinations, ".$row["firstName"]); ?>
  </div>
  
 <div id="buttonArea">

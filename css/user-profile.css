@@ -131,7 +131,19 @@ p{
     transition: all 300ms;
 }
 
+#profileArea{
+    padding-top:200px; 
+    display:flex;
+    flex-direction:column;
+    text-align:center; 
+    color:#FFF9DF; 
+    font-size:60px; 
+    background-color: #1B1948; 
 
+
+
+
+}
 a{
     color:white;
     text-decoration:none;
