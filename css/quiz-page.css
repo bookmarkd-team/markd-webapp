@@ -31,7 +31,7 @@ body{
 }
 
 #head{
-    font-size: 5.0em;
+    font-size: 6.0em;
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: 40px;
@@ -44,6 +44,15 @@ body{
     margin-top: 0px;
     margin-left: 40px;
     color: #1B1948;
+}
+
+#indivquestion{
+    font-size: 3.0em;
+    transition: all 300ms;
+}
+
+#indivquestion:hover{
+    color: #ff7777;
 }
 
 .questionRow{
@@ -59,29 +68,20 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
     align-items: center;
     height: 50vh;
-    width: 50vw;
-}
-
-.recommendations{
-    background-color: #ff7777;
-    color: white;
-    display: flex;
-    justify-content: center;
-    height: 50vh;
-    width: 50vw;
+    width: 60vw;
 }
 
 select{
   background-color: #ff7777;
-  border-radius: 20px;
+  border-radius: 10px;
   color: white;
   padding: 12px;
-  width: 350px;
+  width: 400px;
   border: none;
-  font-size: 20px;
-  appearance: button;
+  font-size: 2.0em;
   outline: none;
 }
 
