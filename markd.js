@@ -111,8 +111,8 @@ function save(destination, hasBeenSaved){
                 
                 //Manipulate the DOM to say the destination has been saved. You can change CSS or HTML with java script here
 
-                // console.log(markdButtons[i]);
-                // console.log(markdButtons[i]);
+                console.log(markdButtons[i]);
+                console.log(markdButtons);
 
                 e.style.backgroundColor="#1B1948";
                 e.innerHTML="Mark'd"; 

@@ -4,7 +4,7 @@ include "meta.html";
 session_start();
 include('navheader.html');
 //receive inputs
-$userId = 1; //$_SESSION["userId"]; //what user's answers do we need
+$userId = $_SESSION["userId"]; //what user's answers do we need
 
 //connect to db
 include('includes/dbconfig.php');
@@ -34,7 +34,7 @@ while($results = $stmtLoadUserResults->fetch(PDO::FETCH_ASSOC)) {
 <html>
 <head>
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/user-homepage.css">
+    <link rel="stylesheet" href="css/user-home-page.css">
 
 </head>
 
