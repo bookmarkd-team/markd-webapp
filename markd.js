@@ -108,9 +108,14 @@ function save(destination, hasBeenSaved){
         if(xhr.readyState === 4){ 
             
             if(hasBeenSaved == true){
-                markdButtons.style.backgroundColor="#1B1948";
-                markdButtons.innerHTML="Mark'd"; 
+                
                 //Manipulate the DOM to say the destination has been saved. You can change CSS or HTML with java script here
+
+                // console.log(markdButtons[i]);
+                // console.log(markdButtons[i]);
+
+                e.style.backgroundColor="#1B1948";
+                e.innerHTML="Mark'd"; 
 
             } else if (hasBeenSaved == false) {
 

@@ -103,6 +103,8 @@ function storeAnswersInDB(event) {
             if(xhr.readyState === 4){
                 console.log(xhr.responseText);// modify or populate html elements based on response.
                     //DOM Manipulation
+
+                    location.href = "user-home.php";
             }
         }
 
