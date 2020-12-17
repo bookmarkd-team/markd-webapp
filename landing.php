@@ -2,7 +2,7 @@
     <?php
         include "meta.html";
     ?>
-    <link rel="stylesheet" href="css/landing-page.css">
+    <link rel="stylesheet" href="css/landingpage.css">
 </head>
 
 <!DOCTYPE html>

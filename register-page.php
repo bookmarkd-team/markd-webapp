@@ -4,7 +4,7 @@
     <?php
         include "meta.html";
     ?>
-    <link rel="stylesheet" href="css/sign-in.css">
+    <link rel="stylesheet" href="css/signin.css">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
     </div>
 
     <div>
-    <input type="text" name="firstName" id="firstName" placeholder="First name" required/>
+    <input type="text" name="firstName" id="firstName" placeholder="First Name" required/>
 
     <input type="text" name="lastName" id="lastName" placeholder="Last Name"required/>
 
@@ -35,7 +35,7 @@
 
     <div>
     <button type="submit" value="register"  class="button">Register</button> </br>
-    <a href="sign-in.php" class="link">Already a user? Login</a>
+    <a href="sign-in.php" class="link">Already a User? Login Here</a>
     </div>
 
 </form>
