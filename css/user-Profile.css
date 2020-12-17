@@ -69,7 +69,7 @@ p{
 
 #mark{
     margin-top:10px;
-    margin-left:10px;
+    margin-right:10px;
     width: 100px;
     height:50px;
     border-radius:7px;
@@ -78,13 +78,32 @@ p{
     background-color:#FF7777;
     font: 25px Muli, sans-serif;
     color:#FFF9DF;
+    transition: all 300ms;
 }
 
-#mark:hover{
-    transform: scale(1.1);
-    background-color: #1B1948;
-    border-color: #1B1948;
+#buttonContainer{
+    display:flex;
+    justify-content:space-between; 
+     margin-bottom:20px; 
 }
+
+#delete{
+    
+    margin-top:10px;
+   
+    margin-left:10px;
+    float:right; 
+    width: 100px;
+    height:50px;
+    border-radius:7px;
+    border-color:#FF7777;
+    border-style: solid;
+    background-color:#FF7777;
+    font: 25px Muli, sans-serif;
+    color:#FFF9DF;
+    transition: all 300ms;
+}
+
 
 #profile{
     float:right;
@@ -112,25 +131,18 @@ p{
     transition: all 300ms;
 }
 
-#discover:hover{
-    transform: scale(1.1);
-    background-color: #1B1948;
-    border-color: #1B1948;
-}
 
 a{
     color:white;
     text-decoration:none;
 }
 
-.button{
-    opacity: 0.85;
-    transition: 0.3s;
-    cursor: pointer;
-}
 
 .button:hover {
-    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #1B1948;
+    border-color: #1B1948;
 }
 
 input:focus {
