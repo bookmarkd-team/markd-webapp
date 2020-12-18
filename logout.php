@@ -12,7 +12,7 @@ session_destroy();
 </head>
 <body>
     <?php
-    include "navheader.html";
+    include "public-navheader.html";
     ?>
 
     <section class="firstform">
