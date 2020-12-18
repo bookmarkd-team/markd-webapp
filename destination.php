@@ -3,6 +3,8 @@ session_start();
 //start session
 include "meta.html";
 include('navheader.html');
+
+$userId = $_SESSION["userId"]; //what user's answers do we need
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +36,7 @@ include('navheader.html');
             <h2><?php echo ($row["city"]);?></h2>
             <h2><?php echo ($row["country"]);?></h2>
             <p><?php echo ($row["destinationDescription"]);?></p>
-            <button data-destination ='<?php echo($row["destinationId"]);?>' type="submit" class="button">Mark</button>
+            <button data-destination ='<?php echo($row["destinationId"]);?>' type="submit" id="mark" class="button">Mark</button>
 
     </div>
     </div>
