@@ -9,7 +9,7 @@ include ("navheader.html");
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="stylesheet" href="css/profile-page.css">
+ <link rel="stylesheet" href="css/profilePage.css">
 <title></title>
 </head>
 <body>
@@ -31,14 +31,6 @@ $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
-<div id="all">
-<div id="profile">
-<?php echo ("Hello: ".$row["firstName"]); ?> 
-
-</div>
-
-
-
 <div id="form">
 <p id="thanks" style="display:none;">Profile Updated!</p>
 <form id="editProfile">
@@ -49,9 +41,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 <label>Password:</label><input type="password" id="password" value="<?php echo($row["password"]);?>"></br>
 <button type="submit" value="update" id="update-data" class="button">Update Account Info</button></br>
 
-
 </form>
-</div>
 </div>
 
 <script>
