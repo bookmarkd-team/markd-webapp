@@ -43,10 +43,10 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 <p id="thanks" style="display:none;">Profile Updated!</p>
 <form id="editProfile">
 <label id="title"> Your Profile </label></br>
-<label>First Name:</label><input type="text" id="firstName" placeholder="<?php echo($row["firstName"]);?>"></br>
-<label>Last Name:</label><input type="text" id="lastName" placeholder="<?php echo($row["lastName"]);?>"></br>
-<label>Email Address:</label><input type="text" id="emailAddress" placeholder="<?php echo($row["emailAddress"]);?>"></br>
-<label>Password:</label><input type="password" id="password" placeholder="<?php echo($row["password"]);?>"></br>
+<label>First Name:</label><input type="text" id="firstName" value="<?php echo($row["firstName"]);?>"></br>
+<label>Last Name:</label><input type="text" id="lastName" value="<?php echo($row["lastName"]);?>"></br>
+<label>Email Address:</label><input type="text" id="emailAddress" value="<?php echo($row["emailAddress"]);?>"></br>
+<label>Password:</label><input type="password" id="password" value="<?php echo($row["password"]);?>"></br>
 <button type="submit" value="update" id="update-data" class="button">Update Account Info</button></br>
 
 
